@@ -1,5 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:Button text="Играть" display-tooltip-when-elided="true" />
-    <ui:Button text="Настройки" display-tooltip-when-elided="true" />
-    <ui:Button text="Выход" display-tooltip-when-elided="true" />
-</ui:UXML>
