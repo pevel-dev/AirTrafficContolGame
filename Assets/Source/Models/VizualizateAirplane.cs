@@ -6,12 +6,28 @@ namespace Source.Models
     public class VisualizeAirplane
     {
         public GameObject PointAirplane;
-        public List<Vector2> path;
+        public LineRenderer LineRenderer;
 
-        public VisualizeAirplane(GameObject pointPlane)
+        public VisualizeAirplane(GameObject pointPlane, LineRenderer lineRendererRenderer)
         {
             PointAirplane = pointPlane;
-            path = new List<Vector2>();
+            LineRenderer = lineRendererRenderer;
+            LineRenderer.startWidth = 3f;
+            LineRenderer.endWidth = 3f;
+            LineRenderer.enabled = true;
+            LineRenderer.startColor = Color.blue;
+            LineRenderer.endColor = Color.blue; 
+        }
+
+        public void UpdatePosition(List<Vector3> points)
+        {
+            LineRenderer.positionCount = points.Count;
+            for (var i = 0; i < points.Count; i++)
+            {
+                points[i] = new Vector3(points[i].x, points[i].y, -10);
+            }
+
+            LineRenderer.SetPositions(points.ToArray());
         }
     }
 }

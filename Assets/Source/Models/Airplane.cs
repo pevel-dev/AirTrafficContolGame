@@ -53,7 +53,7 @@ namespace Source.Models
         {
             if (path.Count == 0)
             {
-                path.Add(RotateVectorOn2(currentPosition, 0.674533f));
+                path.Add(RotateVectorOn2(currentPosition, 0.074533f));
             }
 
             nextPoint = path[0];

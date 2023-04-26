@@ -10,45 +10,33 @@ public class AirScheme : MonoBehaviour
     public GameObject me;
     public Dictionary<int, VisualizeAirplane> radarPoints = new();
 
-    void Start()
-    {
-        foreach (var airplane in AirplaneController.Airplanes)
-        {
-            radarPoints[airplane.id] = new VisualizeAirplane(CreateNewRadarPoint(airplane));
-        }
-    }
-
     void Update()
     {
-        var presentIds = new HashSet<int>();
-
         foreach (var airplane in AirplaneController.Airplanes)
         {
-            presentIds.Add(airplane.id);
             if (radarPoints.TryGetValue(airplane.id, out var point))
-                point.PointAirplane.transform.localPosition = airplane.currentPosition;
+                DrawAirplanesOnScheme(point, airplane);
             else
-                radarPoints[airplane.id] = new VisualizeAirplane(CreateNewRadarPoint(airplane));
+                radarPoints[airplane.id] = BuildVisualizeAirplane(airplane);
         }
-
-        //RemoveOldPoints(presentIds);        
     }
 
-    private GameObject CreateNewRadarPoint(Airplane airplane)
+    private static void DrawAirplanesOnScheme(VisualizeAirplane point, Airplane airplane)
+    {
+        point.PointAirplane.transform.position = airplane.currentPosition;
+        var path = airplane.path.ToList();
+        path.Insert(0, airplane.nextPoint);
+        path.Insert(0, airplane.currentPosition);
+        
+
+        point.UpdatePosition(path);
+    }
+
+    private VisualizeAirplane BuildVisualizeAirplane(Airplane airplane)
     {
         var newPoint = Instantiate(prefabPoint, me.transform);
-        newPoint.transform.localPosition = me.transform.TransformPoint(airplane.currentPosition);
-        return newPoint;
+        newPoint.transform.position = airplane.currentPosition;
+        return new VisualizeAirplane(newPoint,
+            newPoint.AddComponent<LineRenderer>());
     }
-    
-    
-
-    // private void RemoveOldPoints(HashSet<int> presentIds)
-    // {
-    //     foreach (var key in radarPoints.Keys.Where(key => !presentIds.Contains(key)))
-    //     {
-    //         Destroy(radarPoints[key]);
-    //         radarPoints.Remove(key);
-    //     }
-    // }
 }
