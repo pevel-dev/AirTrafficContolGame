@@ -7,6 +7,10 @@ public class ButtonChangeScene : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-        Debug.Log("Allo");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
