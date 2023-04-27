@@ -3,9 +3,10 @@
 namespace Source.Models
 {
     /// <summary>
-    /// Модель самолета
+    /// Путевая точка - 
     /// </summary>
-    public class Airplane : MonoBehaviour
+    public class PathPoint : MonoBehaviour
     {
+        
     }
 }
