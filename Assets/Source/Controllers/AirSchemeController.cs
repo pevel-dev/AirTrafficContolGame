@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class AirScheme : MonoBehaviour
+public class AirSchemeController : MonoBehaviour
 {
     public GameObject prefabAirplane;
     public GameObject me;
