@@ -64,6 +64,12 @@ namespace Source.Models
         private void UpdatePosition()
         {
             transform.position += delta;
+            
+            var difference = transform.position - _path[0].transform.position;
+            difference.Normalize();
+    
+            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
 
             if (Vector2.Distance(_path[0].transform.position, Position) < Eps)
             {
@@ -89,10 +95,6 @@ namespace Source.Models
         private void UpdateDelta()
         {
             delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
-            // delta = new Vector3(
-            //     Position.x - Mathf.Lerp(Position.x, _path[0].transform.position.x, Time.fixedTime * speed),
-            //     Position.y - Mathf.Lerp(Position.y, _path[0].transform.position.y, Time.fixedTime * speed),
-            //     Position.z - Mathf.Lerp(Position.z, _path[0].transform.position.z, Time.fixedTime * speed));
         }
     }
 }
