@@ -1,22 +1,21 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Source.Models
+namespace Source.Controllers
 {
     public class VisualizeAirplane
     {
         public GameObject PointAirplane;
         public LineRenderer LineRenderer;
 
-        public VisualizeAirplane(GameObject pointPlane, LineRenderer lineRendererRenderer)
+        public VisualizeAirplane(LineRenderer lineRendererRenderer)
         {
-            PointAirplane = pointPlane;
             LineRenderer = lineRendererRenderer;
             LineRenderer.startWidth = 3f;
             LineRenderer.endWidth = 3f;
             LineRenderer.enabled = true;
             LineRenderer.startColor = Color.blue;
-            LineRenderer.endColor = Color.blue; 
+            LineRenderer.endColor = Color.blue;
         }
 
         public void UpdatePosition(List<Vector3> points)
