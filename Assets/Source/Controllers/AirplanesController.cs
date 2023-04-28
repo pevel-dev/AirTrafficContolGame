@@ -9,14 +9,26 @@ namespace Source.Controllers
     {
         public GameObject prefabAirplane;
         public GameObject canvasScreen;
-        public static List<Airplane> Airplanes = new();
+        public static HashSet<Airplane> Airplanes = new();
         public Random rnd = new();
 
         void Update()
         {
+            var needDelete = new HashSet<Airplane>();
             foreach (var a in Airplanes)
             {
                 a.Update();
+                var res = a.OnScreen();
+                if (!res)
+                {
+                    needDelete.Add(a);
+                }
+            }
+
+            foreach (var a in needDelete)
+            {
+                Airplanes.Remove(a);
+                Destroy(a.gameObject);
             }
         }
 
@@ -35,8 +47,8 @@ namespace Source.Controllers
             return new List<Vector3>
             {
                 new(30, rnd.Next(0, 1080)),
-                new(rnd.Next(0, 1920), rnd.Next(0,1080)),
-                new(rnd.Next(0, 1920), rnd.Next(0,1080)),
+                new(rnd.Next(0, 1920), rnd.Next(0, 1080)),
+                new(rnd.Next(0, 1920), rnd.Next(0, 1080)),
                 new(rnd.Next(100, 750), rnd.Next(0, 1080))
             };
         }

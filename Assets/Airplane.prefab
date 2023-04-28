@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8, type: 3}
   parentPrefabPoints: {fileID: 0}
-  speed: 15
+  speed: 30
   status: 0
   _path: []
   delta: {x: 0, y: 0, z: 0}

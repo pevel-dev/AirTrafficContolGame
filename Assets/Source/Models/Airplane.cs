@@ -59,15 +59,17 @@ namespace Source.Models
             UpdatePosition();
             linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
+
+
         }
 
         private void UpdatePosition()
         {
             transform.position += delta;
-            
+
             var difference = transform.position - _path[0].transform.position;
             difference.Normalize();
-    
+
             var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
 
@@ -96,5 +98,18 @@ namespace Source.Models
         {
             delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
         }
+
+        public bool OnScreen()
+            => transform.position.x >= 0 && transform.position.x <= 1920 && transform.position.y >= 0 &&
+               transform.position.y <= 1080;
+
+        public void OnDestroy()
+        {
+            Destroy(linesPath.LineRenderer);
+            foreach (var obj in _path)
+            {
+                Destroy(obj);
+            }
+        }
     }
-}
+}   
