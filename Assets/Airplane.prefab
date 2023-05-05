@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6101560806197128271}
   - component: {fileID: 4483027981708156804}
   - component: {fileID: 3218489207001963325}
+  - component: {fileID: 4908797719461345317}
   m_Layer: 0
   m_Name: Airplane
   m_TagString: Untagged
@@ -132,10 +133,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8, type: 3}
   parentPrefabPoints: {fileID: 0}
+  prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
   speed: 30
   status: 0
   _path: []
   delta: {x: 0, y: 0, z: 0}
+  _healthBar: {fileID: 0}
 --- !u!58 &3218489207001963325
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +155,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
+--- !u!95 &4908797719461345317
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921346126584957212}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 377905b86edd91146ba830c3e7642a47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

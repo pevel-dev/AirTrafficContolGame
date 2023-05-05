@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Source.Controllers;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Source.Models
 {
@@ -16,11 +18,13 @@ namespace Source.Models
 
         public GameObject prefabPoint;
         public GameObject parentPrefabPoints;
+        public GameObject prefabHealthBar;
         public float speed;
         public int status;
         public List<GameObject> _path = new();
         public Vector3 delta;
         private VisualizeAirplane linesPath;
+        private HealthBar _healthBar;
 
         public Vector3 Position => transform.position;
 
@@ -32,7 +36,7 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
             }
         }
-
+        
         public void Awake()
         {
             var lineRenderer = this.AddComponent<LineRenderer>();
@@ -53,14 +57,21 @@ namespace Source.Models
 
             UpdateDelta();
         }
-
+        
         public void Update()
         {
+            if (_healthBar is null)
+                InitializeHealthBar();
             UpdatePosition();
             linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
+        }
 
-
+        private void InitializeHealthBar()
+        {
+            _healthBar = Instantiate(prefabHealthBar, Position, Quaternion.identity).GetComponent<HealthBar>();
+            _healthBar.transform.SetParent(transform);
+            _healthBar.Initialize(15);
         }
 
         private void UpdatePosition()
@@ -99,12 +110,13 @@ namespace Source.Models
             delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
         }
 
-        public bool OnScreen()
+        public bool Alive()
             => transform.position.x >= 0 && transform.position.x <= 1920 && transform.position.y >= 0 &&
-               transform.position.y <= 1080;
+               transform.position.y <= 1080 && _healthBar.Status();
 
         public void OnDestroy()
         {
+            Destroy(_healthBar.gameObject);
             Destroy(linesPath.LineRenderer);
             foreach (var obj in _path)
             {

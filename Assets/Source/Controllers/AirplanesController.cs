@@ -18,8 +18,8 @@ namespace Source.Controllers
             foreach (var a in Airplanes)
             {
                 a.Update();
-                var res = a.OnScreen();
-                if (!res)
+                var res = !a.Alive();
+                if (res)
                 {
                     needDelete.Add(a);
                 }
@@ -41,6 +41,8 @@ namespace Source.Controllers
             airplane.LoadPath(path);
             Airplanes.Add(airplane);
         }
+
+        
 
         private List<Vector3> GetRandomStartEnd()
         {
