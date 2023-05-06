@@ -36,11 +36,12 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
             }
         }
-        
+
         public void Awake()
         {
             var lineRenderer = this.AddComponent<LineRenderer>();
             linesPath = new VisualizeAirplane(lineRenderer);
+            InitializeHealthBar();
         }
 
         public void LoadPath(List<Vector3> path)
@@ -57,11 +58,9 @@ namespace Source.Models
 
             UpdateDelta();
         }
-        
+
         public void Update()
         {
-            if (_healthBar is null)
-                InitializeHealthBar();
             UpdatePosition();
             linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
@@ -123,5 +122,10 @@ namespace Source.Models
                 Destroy(obj);
             }
         }
+
+        public void Trigger(Airplane other)
+        {
+            Debug.Log("Aaaa");
+        }
     }
-}   
+}

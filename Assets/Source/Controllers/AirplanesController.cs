@@ -30,6 +30,21 @@ namespace Source.Controllers
                 Airplanes.Remove(a);
                 Destroy(a.gameObject);
             }
+
+            foreach (var airplane1 in Airplanes)
+            {
+                foreach (var airplane2 in Airplanes)
+                {
+                    if (airplane1 == airplane2)
+                        continue;
+                    var diff = airplane1.transform.position - airplane2.transform.position;
+                    if (diff.magnitude < 50)
+                    {
+                        airplane1.Trigger(airplane2);
+                        airplane2.Trigger(airplane1);
+                    }
+                }
+            }
         }
 
         public void NewRandomPlane()
