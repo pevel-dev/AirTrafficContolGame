@@ -5,26 +5,32 @@ using Source.Controllers;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 
 namespace Source.Models
 {
     /// <summary>
     /// Модель самолета
     /// </summary>
-    public class Airplane : MonoBehaviour
+    public class Airplane : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         private const double Eps = 10;
 
         public GameObject prefabPoint;
         public GameObject parentPrefabPoints;
         public GameObject prefabHealthBar;
-        public float speed;
-        public int status;
         public List<GameObject> _path = new();
+
+        public float speed;
         public Vector3 delta;
-        private VisualizeAirplane linesPath;
+
+        private VisualizeAirplane _linesPath;
         private HealthBar _healthBar;
+
+        private Vector3 _startSetPathPosition;
+        public bool inDragDrop = false;
 
         public Vector3 Position => transform.position;
 
@@ -40,7 +46,7 @@ namespace Source.Models
         public void Awake()
         {
             var lineRenderer = this.AddComponent<LineRenderer>();
-            linesPath = new VisualizeAirplane(lineRenderer);
+            _linesPath = new VisualizeAirplane(lineRenderer);
             InitializeHealthBar();
         }
 
@@ -62,7 +68,7 @@ namespace Source.Models
         public void Update()
         {
             UpdatePosition();
-            linesPath.UpdatePosition(Path().ToList());
+            _linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
         }
 
@@ -116,16 +122,50 @@ namespace Source.Models
         public void OnDestroy()
         {
             Destroy(_healthBar.gameObject);
-            Destroy(linesPath.LineRenderer);
+            Destroy(_linesPath.LineRenderer);
             foreach (var obj in _path)
             {
                 Destroy(obj);
             }
         }
 
-        public void Trigger(Airplane other)
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Aaaa");
+            Debug.Log("Коллизия началась");
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            // Debug.Log((other.transform.position - transform.position).magnitude); - расстояние
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            Debug.Log("Коллизия закончилась");
+        }
+
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            _startSetPathPosition = transform.position;
+            inDragDrop = true;
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            // transform.position =
+            //     Camera.allCameras[0]
+            //         .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            transform.position = _startSetPathPosition;
+
+            _path[0].transform.position = Camera.allCameras[0]
+                .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            inDragDrop = false;
         }
     }
 }

@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using Source.Models;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 namespace Source.Controllers
@@ -11,6 +14,14 @@ namespace Source.Controllers
         public GameObject canvasScreen;
         public static HashSet<Airplane> Airplanes = new();
         public Random rnd = new();
+        public int coolDown = 2;
+        
+        private Stopwatch _fromNewPlane = new Stopwatch();
+
+        private void Awake()
+        {
+            _fromNewPlane.Start();
+        }
 
         void Update()
         {
@@ -30,20 +41,11 @@ namespace Source.Controllers
                 Airplanes.Remove(a);
                 Destroy(a.gameObject);
             }
-
-            foreach (var airplane1 in Airplanes)
+        
+            if (Airplanes.Count < 5 && _fromNewPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
             {
-                foreach (var airplane2 in Airplanes)
-                {
-                    if (airplane1 == airplane2)
-                        continue;
-                    var diff = airplane1.transform.position - airplane2.transform.position;
-                    if (diff.magnitude < 50)
-                    {
-                        airplane1.Trigger(airplane2);
-                        airplane2.Trigger(airplane1);
-                    }
-                }
+                NewRandomPlane();
+                _fromNewPlane.Restart();
             }
         }
 
@@ -65,8 +67,6 @@ namespace Source.Controllers
             {
                 new(30, rnd.Next(0, 1080)),
                 new(rnd.Next(0, 1920), rnd.Next(0, 1080)),
-                new(rnd.Next(0, 1920), rnd.Next(0, 1080)),
-                new(rnd.Next(100, 750), rnd.Next(0, 1080))
             };
         }
     }
