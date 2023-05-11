@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Source.Controllers;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Serialization;
 
 namespace Source.Models
 {
@@ -23,7 +19,7 @@ namespace Source.Models
         public GameObject prefabHealthBar;
         public GameObject airplane;
         public List<GameObject> _path = new();
-
+        public float downScaleSpeed = 0.002f;
         public float speed;
         public Vector3 delta;
 
@@ -31,11 +27,12 @@ namespace Source.Models
         private HealthBar _healthBar;
 
         private Vector3 _startSetPathPosition;
-        public bool inDragDrop = false;
 
-        public Vector3 Position => transform.position;
+        private bool _downLocalScale = false;
 
-        public IEnumerable<Vector3> Path()
+        private Vector3 Position => transform.position;
+
+        private IEnumerable<Vector3> Path()
         {
             yield return transform.position;
             foreach (var pathPoint in _path)
@@ -53,8 +50,6 @@ namespace Source.Models
 
         public void LoadPath(List<Vector3> path)
         {
-            // Первая точка  - самолет
-            transform.position = path[0];
             foreach (var pathPoint in path.Skip(1))
             {
                 var pathPointObject = Instantiate(prefabPoint, transform);
@@ -68,9 +63,25 @@ namespace Source.Models
 
         public void Update()
         {
+            if (!_healthBar.Status())
+                Destroy(gameObject);
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
+            UpdateLocalScale();
+        }
+
+        private void UpdateLocalScale()
+        {
+            if (_downLocalScale)
+            {
+                transform.localScale -= new Vector3(downScaleSpeed, downScaleSpeed, downScaleSpeed);
+            }
+
+            if (transform.localScale.x < 0.1f)
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void InitializeHealthBar()
@@ -82,20 +93,21 @@ namespace Source.Models
 
         private void UpdatePosition()
         {
-            transform.position += delta;
-
-            var difference = transform.position - _path[0].transform.position;
-            difference.Normalize();
-
-            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
-
-            if (Vector2.Distance(_path[0].transform.position, Position) < Eps)
+            if (_path.Count > 0)
             {
-                NextPathPoint();
+                transform.position += delta;
+                var difference = transform.position - _path[0].transform.position;
+                difference.Normalize();
+
+                var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
+
+                if (Vector2.Distance(_path[0].transform.position, Position) < Eps)
+                {
+                    NextPathPoint();
+                }
             }
         }
-
 
         private void NextPathPoint()
         {
@@ -104,7 +116,7 @@ namespace Source.Models
 
             if (_path.Count == 0)
             {
-                var position = transform.position + 5000 * delta;
+                var position = transform.position + 100 * delta;
                 var pointObject = Instantiate(prefabPoint, position, Quaternion.identity);
                 pointObject.transform.SetParent(parentPrefabPoints.transform);
                 _path.Add(pointObject);
@@ -113,15 +125,13 @@ namespace Source.Models
 
         private void UpdateDelta()
         {
-            delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
+            if (_path.Count > 0)
+                delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
         }
-
-        public bool Alive()
-            => transform.position.x >= 0 && transform.position.x <= 1920 && transform.position.y >= 0 &&
-               transform.position.y <= 1080 && _healthBar.Status();
 
         public void OnDestroy()
         {
+            AirplanesController.AirplaneCount--;
             Destroy(_healthBar.gameObject);
             Destroy(_linesPath.LineRenderer);
             foreach (var obj in _path)
@@ -133,33 +143,31 @@ namespace Source.Models
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            airplane.GetComponent<Animator>().Play("Plane_explosing");
-            Debug.Log("Коллизия началась");
+            if (other.gameObject.GetComponent<Airplane>() is not null &&
+                (other.gameObject.transform.position - transform.position).magnitude < 40)
+            {
+                _downLocalScale = true;
+                airplane.GetComponent<Animator>().Play("Plane_explosing");
+            }
+
+            if (other.gameObject.CompareTag("airport"))
+            {
+                _downLocalScale = true;
+            }
         }
 
-        private void OnTriggerStay2D(Collider2D other)
-        {
-            // Debug.Log((other.transform.position - transform.position).magnitude); - расстояние
-        }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            Destroy(gameObject);
-            Debug.Log("Коллизия закончилась");
+            // if (other.gameObject.GetComponent<Airplane>() is not null &&
+            //     (other.gameObject.transform.position - transform.position).magnitude < 40)
+            //     Destroy(gameObject);
         }
 
 
         public void OnBeginDrag(PointerEventData eventData)
         {
             _startSetPathPosition = transform.position;
-            inDragDrop = true;
-        }
-
-        public void OnDrag(PointerEventData eventData)
-        {
-            // transform.position =
-            //     Camera.allCameras[0]
-            //         .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -168,7 +176,16 @@ namespace Source.Models
 
             _path[0].transform.position = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
-            inDragDrop = false;
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            var difference = transform.position - Camera.allCameras[0]
+                .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            difference.Normalize();
+
+            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
         }
     }
 }
