@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 29130
+  controlID: 36309
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 29131
+  controlID: 36310
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 29105
+  controlID: 36311
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     y: 0
     width: 221.33333
     height: 348.66666
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -231,18 +231,18 @@ MonoBehaviour:
       m_ExpandedIDs: 6c91ffffb892fffffe92ffffb494ffffbc94ffffbc95ffff5e9cfffff6a0ffff24fbffffea5d0000fe92000082990000a2990000c09a0000529b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: airport (1)
-        m_OriginalName: airport (1)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 39382
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1164.2686, y: 610.9734, z: -1.4544435}
+    m_Target: {x: 1359.3029, y: 689.01056, z: 1.9755092}
     speed: 2
-    m_Value: {x: 1164.2686, y: 610.9734, z: -1.4544435}
+    m_Value: {x: 1359.3029, y: 689.01056, z: 1.9755092}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -614,9 +614,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 237.11264
+    m_Target: 122.902054
     speed: 2
-    m_Value: 237.11264
+    m_Value: 122.902054
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -725,8 +725,8 @@ MonoBehaviour:
     y: 348.66666
     width: 924.6667
     height: 230.66672
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -845,8 +845,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d6990000
-    m_LastClickedInstanceID: 39382
+    m_SelectedInstanceIDs: 0822feff
+    m_LastClickedInstanceID: -122360
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f45d0000d66a0000365f000040750000c8a30000e0a80000948f000000000000
     m_RenameOverlay:
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 39382
+  m_LastSelectedObjectID: -122360
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1029,8 +1029,8 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 39382
-  m_LastVerticalScrollValue: 98.66669
+  m_LastInspectedObjectInstanceID: -122360
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

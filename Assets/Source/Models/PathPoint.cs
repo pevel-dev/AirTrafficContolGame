@@ -9,6 +9,8 @@ namespace Source.Models
     /// </summary>
     public class PathPoint : MonoBehaviour
     {
+        public bool OnCollisionInRunwayZone { get; set; }
+
         private void OnMouseDrag()
         {
             transform.position =
@@ -16,8 +18,16 @@ namespace Source.Models
                     .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
         }
 
-        private void OnMouseDown()
+        private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.CompareTag("RunwayLandingZone"))
+                OnCollisionInRunwayZone = true;
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("RunwayLandingZone"))
+                OnCollisionInRunwayZone = false;
         }
     }
 }

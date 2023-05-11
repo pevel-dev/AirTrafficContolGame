@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - airport
+  - RunwayLandingZone
   layers:
   - Default
   - TransparentFX

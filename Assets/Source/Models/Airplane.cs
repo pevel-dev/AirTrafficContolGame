@@ -22,6 +22,7 @@ namespace Source.Models
         public float downScaleSpeed = 0.002f;
         public float speed;
         public Vector3 delta;
+        public float MinimalLandingLength = 300;
 
         private VisualizeAirplane _linesPath;
         private HealthBar _healthBar;
@@ -64,7 +65,7 @@ namespace Source.Models
         public void Update()
         {
             if (!_healthBar.Status())
-                Destroy(gameObject);
+                _downLocalScale = true;
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
@@ -150,7 +151,7 @@ namespace Source.Models
                 airplane.GetComponent<Animator>().Play("Plane_explosing");
             }
 
-            if (other.gameObject.CompareTag("airport"))
+            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone && (_path[^1].transform.position - transform.position).magnitude > MinimalLandingLength)
             {
                 _downLocalScale = true;
             }
