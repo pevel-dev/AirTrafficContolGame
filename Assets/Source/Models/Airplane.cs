@@ -21,6 +21,7 @@ namespace Source.Models
         public GameObject prefabPoint;
         public GameObject parentPrefabPoints;
         public GameObject prefabHealthBar;
+        public GameObject airplane;
         public List<GameObject> _path = new();
 
         public float speed;
@@ -132,6 +133,7 @@ namespace Source.Models
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            airplane.GetComponent<Animator>().Play("Plane_explosion_anim");
             Debug.Log("Коллизия началась");
         }
 
@@ -142,6 +144,7 @@ namespace Source.Models
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            Destroy(gameObject);
             Debug.Log("Коллизия закончилась");
         }
 
