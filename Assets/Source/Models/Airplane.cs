@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Source.Controllers;
 using Unity.VisualScripting;
@@ -13,16 +14,19 @@ namespace Source.Models
     public class Airplane : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         private const double Eps = 10;
-
+        
         public GameObject prefabPoint;
         public GameObject parentPrefabPoints;
         public GameObject prefabHealthBar;
         public GameObject airplane;
         public List<GameObject> _path = new();
-        public float downScaleSpeed = 0.002f;
+        public float downScaleSpeed;
         public float speed;
         public Vector3 delta;
-        public float MinimalLandingLength = 300;
+        public float MinimalLandingLength;
+        public float MouseMult;
+        public float SecondAlive;
+
 
         private VisualizeAirplane _linesPath;
         private HealthBar _healthBar;
@@ -47,6 +51,7 @@ namespace Source.Models
             var lineRenderer = this.AddComponent<LineRenderer>();
             _linesPath = new VisualizeAirplane(lineRenderer);
             InitializeHealthBar();
+
         }
 
         public void LoadPath(List<Vector3> path)
@@ -65,7 +70,10 @@ namespace Source.Models
         public void Update()
         {
             if (!_healthBar.Status())
+            {
                 _downLocalScale = true;
+                //_gameController.RemoveHeal();
+            }
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
@@ -89,7 +97,7 @@ namespace Source.Models
         {
             _healthBar = Instantiate(prefabHealthBar, Position, Quaternion.identity).GetComponent<HealthBar>();
             _healthBar.transform.SetParent(transform);
-            _healthBar.Initialize(15);
+            _healthBar.Initialize(SecondAlive);
         }
 
         private void UpdatePosition()
@@ -149,11 +157,14 @@ namespace Source.Models
             {
                 _downLocalScale = true;
                 airplane.GetComponent<Animator>().Play("Plane_explosing");
+                GameController.RemoveHeal();
             }
 
-            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone && (_path[^1].transform.position - transform.position).magnitude > MinimalLandingLength)
+            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
+                (_path[^1].transform.position - transform.position).magnitude > MinimalLandingLength)
             {
                 _downLocalScale = true;
+                GameController.AddPoints(AirplaneTypes.Basic);
             }
         }
 
@@ -173,7 +184,7 @@ namespace Source.Models
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            transform.position = _startSetPathPosition;
+            //transform.position = _startSetPathPosition;
 
             _path[0].transform.position = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
@@ -187,6 +198,16 @@ namespace Source.Models
 
             var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
+        }
+
+        private void OnMouseOver()
+        {
+            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
+            if (mouseWheelScroll != 0)
+            {
+                speed += mouseWheelScroll * MouseMult;
+                UpdateDelta();
+            }
         }
     }
 }
