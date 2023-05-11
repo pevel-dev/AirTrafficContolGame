@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 3218489207001963325}
   - component: {fileID: 4908797719461345317}
   - component: {fileID: 5707549772360193380}
-  - component: {fileID: -9164254698684035713}
   - component: {fileID: 2713545584613451802}
   m_Layer: 14
   m_Name: Airplane
@@ -168,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 7921346126584957212}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5a042ba0ec4a9a44aa5cef35faecda6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0843e3ba73c61814092dab7492415116, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -200,21 +199,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!111 &-9164254698684035713
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7921346126584957212}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 81ae97e121d574e448d03fa3dd04fad3, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!212 &2713545584613451802
 SpriteRenderer:
   m_ObjectHideFlags: 0

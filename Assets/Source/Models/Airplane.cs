@@ -133,7 +133,7 @@ namespace Source.Models
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            airplane.GetComponent<Animator>().Play("Plane_explosion_anim");
+            airplane.GetComponent<Animator>().Play("Plane_explosing");
             Debug.Log("Коллизия началась");
         }
 
