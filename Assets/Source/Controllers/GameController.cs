@@ -24,7 +24,6 @@ namespace Source.Controllers
 
         void Update()
         {
-            Debug.Log(_airplanesController.airplaneLimit);
             if (Heal < 0)
             {
                 SceneManager.LoadScene(GameOverSceneName);

@@ -31,6 +31,7 @@ public class HealthBar : MonoBehaviour
 
     public bool Status()
     {
-        return _health > 0;
+        Debug.Log(_health);
+        return _health >= 0;
     }
 }

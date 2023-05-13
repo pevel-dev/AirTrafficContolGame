@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Source.Models;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 using Random = System.Random;
 
 namespace Source.Controllers

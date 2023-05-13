@@ -48,10 +48,9 @@ namespace Source.Models
 
         public void Awake()
         {
+            InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
             _linesPath = new VisualizeAirplane(lineRenderer);
-            InitializeHealthBar();
-
         }
 
         public void LoadPath(List<Vector3> path)
