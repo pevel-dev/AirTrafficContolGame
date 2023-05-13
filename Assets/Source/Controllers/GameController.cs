@@ -1,38 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using Source.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+namespace Source.Controllers
 {
-    public int StartHeals;
-    public string GameOverSceneName;
-    public static int Heal { get; private set; } = 1;
-    public static int Points { get; private set; }
-
-    // Update is called once per frame
-
-    public void Awake()
+    public class GameController : MonoBehaviour
     {
-        GameController.Heal = StartHeals;
-    }
-    void Update()
-    {
-        Debug.Log(GameController.Heal);
-        if (GameController.Heal < 0)
+        public int StartHeals;
+        public string GameOverSceneName;
+        public static int Heal { get; private set; } = 1;
+        public static int Points { get; private set; }
+
+        public GameObject AirplanesControllerSource;
+        private static AirplanesController _airplanesController;
+
+
+        public void Awake()
         {
-            SceneManager.LoadScene(GameOverSceneName);
+            _airplanesController = AirplanesControllerSource.GetComponent<AirplanesController>();
+            Heal = StartHeals;
         }
-    }
 
-    public static void RemoveHeal()
-    {
-        Heal--;
-    }
+        void Update()
+        {
+            Debug.Log(_airplanesController.airplaneLimit);
+            if (Heal < 0)
+            {
+                SceneManager.LoadScene(GameOverSceneName);
+            }
+        }
 
-    public static void AddPoints(AirplaneTypes airplaneType)
-    {
-        Points += (int)airplaneType;
+        public static void RemoveHeal()
+        {
+            Heal--;
+        }
+
+        public static void AddPoints(AirplaneTypes airplaneType)
+        {
+            Points += (int)airplaneType;
+            _airplanesController.airplaneLimit = (int)Math.Log(Points);
+        }
     }
 }

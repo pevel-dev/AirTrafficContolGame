@@ -144,6 +144,7 @@ MonoBehaviour:
   delta: {x: 0, y: 0, z: 0}
   MinimalLandingLength: 300
   MouseMult: 30
+  SecondAlive: 50
 --- !u!58 &3218489207001963325
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -278,5 +279,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 200, y: 200}
+  m_Size: {x: 300, y: 300}
   m_EdgeRadius: 0
