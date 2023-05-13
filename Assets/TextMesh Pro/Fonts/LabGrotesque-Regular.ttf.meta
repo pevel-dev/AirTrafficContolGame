@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 46b723eb42bdb34489218e992c06e84b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lab Grotesque
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 83da375d209265140b996a763bef4594, type: 3}
+  - {fileID: 12800000, guid: e4b3336afeae3a9428514ffee086853d, type: 3}
+  - {fileID: 12800000, guid: 531e49f91057df04bb98d903bc6a1281, type: 3}
+  - {fileID: 12800000, guid: 84e6813997ae09b4b84c52fbf9d9fff8, type: 3}
+  - {fileID: 12800000, guid: 85a8732b0fc27c64c975561b81a51a21, type: 3}
+  - {fileID: 12800000, guid: 00b4e7c0d97802048a5b2f507a43d2eb, type: 3}
+  - {fileID: 12800000, guid: 80bdf26b1a5875b4cba0b0cf428f8cbf, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
