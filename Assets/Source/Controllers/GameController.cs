@@ -29,6 +29,7 @@ namespace Source.Controllers
 
         private void Update()
         {
+            Debug.Log(_heal);
             if (_heal < 0)
             {
                 SceneManager.LoadScene(gameOverSceneName);
@@ -45,6 +46,11 @@ namespace Source.Controllers
         {
             _points += (int)airplaneType;
             _airplanesController.CalculateNewLimit(_points);
+        }
+
+        public static void AddHeals()
+        {
+            _heal += 2;
         }
     }
 }

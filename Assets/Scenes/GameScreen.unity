@@ -12106,7 +12106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4266c9036e2e438892e0caf1c5429ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabAirplane: {fileID: 7921346126584957212, guid: e64aec8dee0a76b4680558cbc81a2751, type: 3}
+  prefabAirplane: {fileID: 7921346126584957212, guid: 6095789d250dc5d48b2c3195e33b01c3, type: 3}
   canvasScreen: {fileID: 1074767257}
   coolDown: 2
   airplaneLimit: 5

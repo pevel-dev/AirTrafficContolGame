@@ -24,7 +24,7 @@ namespace Source.Models
         private GameObject prefabHealthBar;
 
         [FormerlySerializedAs("airplane")] [SerializeField] [Header("Префаб самолета")]
-        private GameObject airplanePrefab;
+        protected GameObject airplanePrefab;
 
         [SerializeField] [Header("Скорость уменьшения самолета при снижении")]
         private float downScaleSpeed;
@@ -33,7 +33,7 @@ namespace Source.Models
         private float speed;
 
         [FormerlySerializedAs("MinimalLandingLength")] [SerializeField] [Header("Минимальное расстояние для посадки")]
-        private float minimalLandingLength;
+        protected float minimalLandingLength;
 
         [FormerlySerializedAs("MouseMult")] [SerializeField] [Header("Мультипликатор мыши")]
         private float mouseMult;
@@ -53,9 +53,9 @@ namespace Source.Models
 
         private PathLine _linesPath;
         private HealthBar _healthBar;
-        private bool _downLocalScale;
+        protected bool _downLocalScale;
         private Vector3 _delta;
-        private readonly List<GameObject> _path = new();
+        protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
 
         private IEnumerable<Vector3> Path()
@@ -65,7 +65,13 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
         }
 
-        public void LoadPath(List<Vector3> path)
+        public void InitializeAirplane(List<Vector3> path)
+        {
+            LoadPath(path);
+            UpdateDelta();
+        }
+
+        private void LoadPath(List<Vector3> path)
         {
             foreach (var pathPoint in path.Skip(1))
             {
@@ -74,8 +80,6 @@ namespace Source.Models
                 pathPointObject.transform.SetParent(parentPrefabPoints.transform);
                 _path.Add(pathPointObject);
             }
-
-            UpdateDelta();
         }
 
         #region unityEvents

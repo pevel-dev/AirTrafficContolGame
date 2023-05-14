@@ -52,7 +52,7 @@ namespace Source.Controllers
             var airplane = Instantiate(prefabAirplane, path[0], Quaternion.identity).GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
-            airplane.LoadPath(path);
+            airplane.InitializeAirplane(path);
         }
 
         private List<Vector3> GetRandomStartEnd()
