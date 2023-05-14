@@ -9,11 +9,18 @@ namespace Source.Controllers
 {
     public class CloudsController : MonoBehaviour
     {
+        [SerializeField]
+        [Header("Максимальное количество облаков")]
+        private int maxClouds;
+        [SerializeField]
+        [Header("Префаб облака")]
+        private GameObject cloudPrefab;
+        [SerializeField]
+        [Header("Разные спрайты облаков")]
+        private Sprite[] cloudSprites;
+
         public static int CloudsCount { get; set;  }
-        public int maxClouds;
-        public GameObject cloudPrefab;
         private readonly Random _random = new();
-        public Sprite[] cloudSprites;
 
         void Awake()
         {

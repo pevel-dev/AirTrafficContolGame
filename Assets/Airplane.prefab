@@ -138,14 +138,15 @@ MonoBehaviour:
   prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8, type: 3}
   parentPrefabPoints: {fileID: 0}
   prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
-  airplane: {fileID: 7921346126584957212}
-  _path: []
+  airplanePrefab: {fileID: 7921346126584957212}
   downScaleSpeed: 0.002
   speed: 50
-  delta: {x: 0, y: 0, z: 0}
-  MinimalLandingLength: 300
-  MouseMult: 30
-  SecondAlive: 15
+  minimalLandingLength: 300
+  mouseMult: 30
+  lifeTime: 30
+  eps: 10
+  widthLine: 3
+  lineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!58 &3218489207001963325
 CircleCollider2D:
   m_ObjectHideFlags: 0

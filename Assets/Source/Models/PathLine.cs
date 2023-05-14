@@ -1,30 +1,27 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Source.Controllers
+namespace Source.Models
 {
-    public class VisualizeAirplane
+    public class PathLine
     {
-        public GameObject PointAirplane;
-        public LineRenderer LineRenderer;
+        public LineRenderer LineRenderer { get; }
 
-        public VisualizeAirplane(LineRenderer lineRendererRenderer)
+        public PathLine(LineRenderer lineRendererRenderer, Color color, float width)
         {
             LineRenderer = lineRendererRenderer;
-            LineRenderer.startWidth = 3f;
-            LineRenderer.endWidth = 3f;
+            LineRenderer.startWidth = width;
+            LineRenderer.endWidth = width;
+            LineRenderer.startColor = color;
+            LineRenderer.endColor = color;
             LineRenderer.enabled = true;
-            LineRenderer.startColor = Color.blue;
-            LineRenderer.endColor = Color.blue;
         }
 
         public void UpdatePosition(List<Vector3> points)
         {
             LineRenderer.positionCount = points.Count;
             for (var i = 0; i < points.Count; i++)
-            {
                 points[i] = new Vector3(points[i].x, points[i].y, -10);
-            }
 
             LineRenderer.SetPositions(points.ToArray());
         }

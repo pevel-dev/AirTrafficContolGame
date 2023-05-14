@@ -2,43 +2,49 @@
 using Source.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Source.Controllers
 {
     public class GameController : MonoBehaviour
     {
-        public int StartHeals;
-        public string GameOverSceneName;
-        public static int Heal { get; private set; } = 1;
-        public static int Points { get; private set; }
+        [SerializeField] [Header("Начальное количество жизней")]
+        private int startHeals;
 
-        public GameObject AirplanesControllerSource;
+        [SerializeField] [Header("Название сцены конца игры")]
+        private string gameOverSceneName;
+
+        [SerializeField] [Header("Объект контроллера самолетов")]
+        private GameObject airplanesControllerSource;
+
         private static AirplanesController _airplanesController;
-
+        private static int _heal;
+        private static int _points;
 
         public void Awake()
         {
-            _airplanesController = AirplanesControllerSource.GetComponent<AirplanesController>();
-            Heal = StartHeals;
+            _airplanesController = airplanesControllerSource.GetComponent<AirplanesController>();
+            _heal = startHeals;
         }
 
-        void Update()
+        private void Update()
         {
-            if (Heal < 0)
+            if (_heal < 0)
             {
-                SceneManager.LoadScene(GameOverSceneName);
+                SceneManager.LoadScene(gameOverSceneName);
             }
         }
 
-        public static void RemoveHeal()
+        public static void AirplaneKilled()
         {
-            Heal--;
+            _airplanesController.KilledAirplane();
+            _heal--;
         }
 
         public static void AddPoints(AirplaneTypes airplaneType)
         {
-            Points += (int)airplaneType;
-            _airplanesController.airplaneLimit = (int)Math.Log(Points);
+            _points += (int)airplaneType;
+            _airplanesController.CalculateNewLimit(_points);
         }
     }
 }

@@ -9,32 +9,44 @@ namespace Source.Controllers
 {
     public class AirplanesController : MonoBehaviour
     {
-        public GameObject prefabAirplane;
-        public GameObject canvasScreen;
-        private readonly Random _random = new();
-        public int coolDown = 2;
-        public int airplaneLimit = 5;
+        [SerializeField] [Header("Префаб самолета")]
+        private GameObject prefabAirplane;
 
-        public static int AirplaneCount { get; set; }
+        [SerializeField] [Header("Ссылка на экран")]
+        private GameObject canvasScreen;
 
+        [SerializeField] [Header("Задержка между спавном самолетов в секундах")]
+        private int coolDown;
+
+        [SerializeField] [Header("Начальный лимит спавна самолетов")]
+        private int airplaneLimit;
+
+        [SerializeField] [Header("Размер спавна по X")]
+        private int spawnX;
+
+        [SerializeField] [Header("Размер спавна по Y")]
+        private int spawnY;
+
+        private static int _airplaneCount;
         private readonly Stopwatch _timeFromLastPlane = new();
+        private readonly Random _random = new();
 
         private void Awake()
         {
             _timeFromLastPlane.Start();
         }
 
-        void Update()
+        private void Update()
         {
-            if (AirplaneCount < airplaneLimit && _timeFromLastPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
+            if (_airplaneCount < airplaneLimit && _timeFromLastPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
             {
                 NewRandomPlane();
-                AirplaneCount++;
+                _airplaneCount++;
                 _timeFromLastPlane.Restart();
             }
         }
 
-        public void NewRandomPlane()
+        private void NewRandomPlane()
         {
             var path = GetRandomStartEnd();
             var airplane = Instantiate(prefabAirplane, path[0], Quaternion.identity).GetComponent<Airplane>();
@@ -43,21 +55,30 @@ namespace Source.Controllers
             airplane.LoadPath(path);
         }
 
-
         private List<Vector3> GetRandomStartEnd()
         {
             var randoms = new Vector3[]
             {
-                new(10, _random.Next(10, 1070)),
-                new(1910, _random.Next(10, 1070)),
-                new(_random.Next(10, 1910), 10),
-                new(_random.Next(10, 1910), 1070),
+                new(0, _random.Next(0, spawnY)),
+                new(spawnX, _random.Next(0, spawnY)),
+                new(_random.Next(0, spawnX), 0),
+                new(_random.Next(0, spawnX), spawnY),
             };
             return new List<Vector3>
             {
                 randoms[_random.Next(0, 3)],
-                new(_random.Next(0, 1920), _random.Next(0, 1080)),
+                new(_random.Next(0, spawnX), _random.Next(0, spawnY)),
             };
+        }
+
+        public void CalculateNewLimit(int points)
+        {
+            // TODO: Увеличение лимита в зависимости от points
+        }
+
+        public void KilledAirplane()
+        {
+            _airplaneCount--;
         }
     }
 }
