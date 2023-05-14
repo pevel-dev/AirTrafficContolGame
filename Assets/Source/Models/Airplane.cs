@@ -134,7 +134,7 @@ namespace Source.Models
         private void UpdateDelta()
         {
             if (_path.Count > 0)
-                delta = (_path[0].transform.position - transform.position).normalized * speed * Time.deltaTime;
+                delta = (_path[0].transform.position - transform.position).normalized * (speed * Time.deltaTime);
         }
 
         public void OnDestroy()
