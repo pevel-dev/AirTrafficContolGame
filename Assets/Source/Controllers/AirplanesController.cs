@@ -48,7 +48,6 @@ namespace Source.Controllers
         {
             _currentTime += Time.deltaTime;
             _currentAirplaneLimit = (int)(startAirplaneLimit * airplaneLimitCurve.Evaluate(_currentTime));
-            Debug.Log(_currentAirplaneLimit);
             if (_airplaneCount < _currentAirplaneLimit && _timeFromLastPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
             {
                 NewRandomPlane();

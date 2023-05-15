@@ -16,7 +16,11 @@ namespace Source.Controllers
 
         [SerializeField] [Header("Объект контроллера самолетов")]
         private GameObject airplanesControllerSource;
+        
+        [SerializeField] [Header("Контроллер монеток")]
+        protected GameObject moneyController;
 
+        private static MoneyController _moneyController;
         private static AirplanesController _airplanesController;
         private static int _heal;
         private static int _points;
@@ -34,7 +38,7 @@ namespace Source.Controllers
 
         public static void EndGame()
         {
-            //_heal = -1;
+            _heal = -1;
         }
 
         public static void AirplaneKilled()
@@ -46,11 +50,13 @@ namespace Source.Controllers
         public static void CollectedMoney()
         {
             _money += 1;
+            _moneyController.KilledMoney();
         }
 
         private void Awake()
         {
             _airplanesController = airplanesControllerSource.GetComponent<AirplanesController>();
+            _moneyController = moneyController.GetComponent<MoneyController>();
             _heal = startHeals;
             if (PlayerPrefs.HasKey("money"))
                 _money = PlayerPrefs.GetInt("money");

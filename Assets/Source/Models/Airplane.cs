@@ -25,6 +25,7 @@ namespace Source.Models
 
         [FormerlySerializedAs("airplane")] [SerializeField] [Header("Префаб самолета")]
         protected GameObject airplanePrefab;
+        
 
         [SerializeField] [Header("Скорость уменьшения самолета при снижении")]
         private float downScaleSpeed;
@@ -156,6 +157,12 @@ namespace Source.Models
                 _downLocalScale = true;
                 GameController.AddPoints(AirplaneTypes.Basic);
                 GameController.AirplaneKilled();
+            }
+
+            if (other.gameObject.CompareTag("money"))
+            {
+                Destroy(other.gameObject);
+                GameController.CollectedMoney();
             }
         }
 
