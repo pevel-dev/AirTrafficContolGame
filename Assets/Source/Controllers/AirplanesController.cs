@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Source.Models;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Debug = UnityEngine.Debug;
 using Random = System.Random;
 
 namespace Source.Controllers
@@ -19,7 +21,10 @@ namespace Source.Controllers
         private int coolDown;
 
         [SerializeField] [Header("Начальный лимит спавна самолетов")]
-        private int airplaneLimit;
+        private int startAirplaneLimit;
+        
+        [SerializeField] [Header("Лимит спавна самолетов")]
+        private AnimationCurve airplaneLimitCurve;
 
         [SerializeField] [Header("Размер спавна по X")]
         private int spawnX;
@@ -30,15 +35,21 @@ namespace Source.Controllers
         private static int _airplaneCount;
         private readonly Stopwatch _timeFromLastPlane = new();
         private readonly Random _random = new();
+        private int _currentAirplaneLimit;
+        private float _currentTime;
 
         private void Awake()
         {
+            _currentTime = 0;   
             _timeFromLastPlane.Start();
         }
 
         private void Update()
         {
-            if (_airplaneCount < airplaneLimit && _timeFromLastPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
+            _currentTime += Time.deltaTime;
+            _currentAirplaneLimit = (int)(startAirplaneLimit * airplaneLimitCurve.Evaluate(_currentTime));
+            Debug.Log(_currentAirplaneLimit);
+            if (_airplaneCount < _currentAirplaneLimit && _timeFromLastPlane.Elapsed > TimeSpan.FromSeconds(coolDown))
             {
                 NewRandomPlane();
                 _airplaneCount++;
@@ -70,12 +81,7 @@ namespace Source.Controllers
                 new(_random.Next(0, spawnX), _random.Next(0, spawnY)),
             };
         }
-
-        public void CalculateNewLimit(int points)
-        {
-            // TODO: Увеличение лимита в зависимости от points
-        }
-
+        
         public void KilledAirplane()
         {
             _airplaneCount--;

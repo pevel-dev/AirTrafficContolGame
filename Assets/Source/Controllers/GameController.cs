@@ -25,7 +25,6 @@ namespace Source.Controllers
         public static void AddPoints(AirplaneTypes airplaneType)
         {
             _points += (int)airplaneType;
-            _airplanesController.CalculateNewLimit(_points);
         }
 
         public static void AddHeals()
@@ -35,7 +34,7 @@ namespace Source.Controllers
 
         public static void EndGame()
         {
-            _heal = -1;
+            //_heal = -1;
         }
 
         public static void AirplaneKilled()
@@ -64,11 +63,10 @@ namespace Source.Controllers
 
         private void Update()
         {
-            Debug.Log(PlayerPrefs.GetInt("record"));
             if (_heal < 0)
             {
-                SceneManager.LoadScene(gameOverSceneName);
                 SaveAllToDisk();
+                SceneManager.LoadScene(gameOverSceneName);
             }
         }
 
