@@ -9,7 +9,7 @@ namespace Source.Models
     /// </summary>
     public class PathPoint : MonoBehaviour
     {
-        public bool OnCollisionInRunwayZone { get; set; }
+        public bool OnCollisionInRunwayZone { get; private set; }
 
         private void OnMouseDrag()
         {

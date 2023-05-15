@@ -9,9 +9,13 @@ namespace Source.Models
 {
     public class Cloud : MonoBehaviour
     {
+        [SerializeField]
+        [Header("Кривая появления облака")]
+        private AnimationCurve startCurve;
+        [SerializeField]
+        [Header("Кривая удаления облака")]
+        private AnimationCurve endCurve;
         private SpriteRenderer _sprite;
-        public AnimationCurve startCurve;
-        public AnimationCurve endCurve;
         private float _secondsLeft;
         private readonly Random _random = new();
         private bool _fadeOutCalled;

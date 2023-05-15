@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
     {
         _health = seconds;
         _maxHealth = seconds;
-        _material = this.GetComponent<Renderer>();
+        _material = GetComponent<Renderer>();
         _property = new MaterialPropertyBlock();
     }
 
