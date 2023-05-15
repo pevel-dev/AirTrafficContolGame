@@ -20,27 +20,7 @@ namespace Source.Controllers
         private static AirplanesController _airplanesController;
         private static int _heal;
         private static int _points;
-
-        public void Awake()
-        {
-            _airplanesController = airplanesControllerSource.GetComponent<AirplanesController>();
-            _heal = startHeals;
-        }
-
-        private void Update()
-        {
-            Debug.Log(_heal);
-            if (_heal < 0)
-            {
-                SceneManager.LoadScene(gameOverSceneName);
-            }
-        }
-
-        public static void AirplaneKilled()
-        {
-            _airplanesController.KilledAirplane();
-            _heal--;
-        }
+        private static int _money;
 
         public static void AddPoints(AirplaneTypes airplaneType)
         {
@@ -56,6 +36,55 @@ namespace Source.Controllers
         public static void EndGame()
         {
             _heal = -1;
+        }
+
+        public static void AirplaneKilled()
+        {
+            _airplanesController.KilledAirplane();
+            _heal--;
+        }
+
+        public static void CollectedMoney()
+        {
+            _money += 1;
+        }
+
+        private void Awake()
+        {
+            _airplanesController = airplanesControllerSource.GetComponent<AirplanesController>();
+            _heal = startHeals;
+            if (PlayerPrefs.HasKey("money"))
+                _money = PlayerPrefs.GetInt("money");
+            else
+            {
+                _money = 0;
+                PlayerPrefs.SetInt("money", 0);
+            }
+        }
+
+        private void Update()
+        {
+            Debug.Log(PlayerPrefs.GetInt("record"));
+            if (_heal < 0)
+            {
+                SceneManager.LoadScene(gameOverSceneName);
+                SaveAllToDisk();
+            }
+        }
+
+        private void SaveAllToDisk()
+        {
+            if (PlayerPrefs.HasKey("record"))
+            {
+                var record = PlayerPrefs.GetInt("record");
+                if (_points > record) 
+                    PlayerPrefs.SetInt("record", _points);
+            }
+            else
+                PlayerPrefs.SetInt("record", _points);
+            
+            PlayerPrefs.SetInt("money", _money);
+            PlayerPrefs.Save();
         }
     }
 }
