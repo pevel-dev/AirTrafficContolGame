@@ -19,8 +19,13 @@ namespace Source.Models
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
                 _downLocalScale = true;
-                GameController.AddPoints(AirplaneTypes.Basic);
+                GameController.AddPoints(AirplaneTypes.Gold);
                 GameController.AddHeals();
+            }
+            if (other.gameObject.CompareTag("money"))
+            {
+                Destroy(other.gameObject);
+                GameController.CollectedMoney();
             }
         }
     }

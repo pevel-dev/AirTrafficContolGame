@@ -11,8 +11,8 @@ namespace Source.Controllers
 {
     public class AirplanesController : MonoBehaviour
     {
-        [SerializeField] [Header("Префаб самолета")]
-        private GameObject prefabAirplane;
+        [SerializeField] [Header("Префабы самолетов")]
+        private GameObject[] prefabAirplane;
 
         [SerializeField] [Header("Ссылка на экран")]
         private GameObject canvasScreen;
@@ -59,7 +59,7 @@ namespace Source.Controllers
         private void NewRandomPlane()
         {
             var path = GetRandomStartEnd();
-            var airplane = Instantiate(prefabAirplane, path[0], Quaternion.identity).GetComponent<Airplane>();
+            var airplane = Instantiate(prefabAirplane[_random.Next(0, prefabAirplane.Length)], path[0], Quaternion.identity).GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
             airplane.InitializeAirplane(path);

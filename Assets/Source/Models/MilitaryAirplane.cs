@@ -22,6 +22,11 @@ namespace Source.Models
                 // TODO: Анимация взрыва
                 GameController.EndGame();
             }
+            if (other.gameObject.CompareTag("money"))
+            {
+                Destroy(other.gameObject);
+                GameController.CollectedMoney();
+            }
         }
         public new void OnBeginDrag(PointerEventData eventData)
         {
