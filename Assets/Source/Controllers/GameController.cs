@@ -52,5 +52,10 @@ namespace Source.Controllers
         {
             _heal += 2;
         }
+
+        public static void EndGame()
+        {
+            _heal = -1;
+        }
     }
 }
