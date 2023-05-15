@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6101560806197128271}
-  - component: {fileID: 4483027981708156804}
+  - component: {fileID: 3095538757230299298}
   - component: {fileID: 3218489207001963325}
   - component: {fileID: 4908797719461345317}
   - component: {fileID: 5707549772360193380}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1263294636721113029}
   - component: {fileID: 5957730368296325046}
   m_Layer: 14
-  m_Name: Airplane
+  m_Name: MilitaryAirplane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4483027981708156804
+--- !u!114 &3095538757230299298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,15 +132,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7921346126584957212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 333c9a850f464343983194d6d699fdcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9aeb9c1c1ebe477fb1ca398cebb78819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8, type: 3}
   parentPrefabPoints: {fileID: 0}
   prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
   airplanePrefab: {fileID: 7921346126584957212}
-  downScaleSpeed: 0.002
-  speed: 75
+  downScaleSpeed: 0
+  speed: 30
   minimalLandingLength: 100
   mouseMult: 30
   lifeTime: 100

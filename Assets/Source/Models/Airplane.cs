@@ -94,10 +94,11 @@ namespace Source.Models
 
         private void Update()
         {
-            if (!_healthBar.Status())
+            if (!IsAlive())
             {
+                if (!_downLocalScale)
+                    GameController.AirplaneKilled();
                 _downLocalScale = true;
-                GameController.AirplaneKilled();
             }
 
             UpdatePosition();
@@ -154,10 +155,15 @@ namespace Source.Models
             {
                 _downLocalScale = true;
                 GameController.AddPoints(AirplaneTypes.Basic);
+                GameController.AirplaneKilled();
             }
         }
 
         #endregion
+
+        private bool IsAlive()
+            => _healthBar.Status() && transform.position.x is >= 0 and <= 1920 &&
+               transform.position.y is >= 0 and <= 1080;
 
         private void UpdateLocalScale()
         {
