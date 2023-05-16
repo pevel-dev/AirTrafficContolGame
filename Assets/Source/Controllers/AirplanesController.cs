@@ -42,6 +42,7 @@ namespace Source.Controllers
         {
             _currentTime = 0;   
             _timeFromLastPlane.Start();
+            _airplaneCount = 0;
         }
 
         private void Update()
