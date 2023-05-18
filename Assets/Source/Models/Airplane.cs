@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Source.Controllers;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Source.Models
 {
@@ -25,7 +29,7 @@ namespace Source.Models
 
         [FormerlySerializedAs("airplane")] [SerializeField] [Header("Префаб самолета")]
         protected GameObject airplanePrefab;
-        
+
 
         [SerializeField] [Header("Скорость уменьшения самолета при снижении")]
         private float downScaleSpeed;
@@ -51,7 +55,10 @@ namespace Source.Models
         [SerializeField] [Header("Цвет путевой линии")]
         private Color lineColor;
 
-
+        [SerializeField] [Header("Радиус")] 
+        protected int radius;
+        
+        protected GameController _gameController;
         private PathLine _linesPath;
         private HealthBar _healthBar;
         protected bool _downLocalScale;
@@ -66,10 +73,11 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
         }
 
-        public void InitializeAirplane(List<Vector3> path)
+        public void InitializeAirplane(List<Vector3> path, GameController gameController)
         {
             LoadPath(path);
             UpdateDelta();
+            _gameController = gameController;
         }
 
         private void LoadPath(List<Vector3> path)
@@ -98,7 +106,7 @@ namespace Source.Models
             if (!IsAlive())
             {
                 if (!_downLocalScale)
-                    GameController.AirplaneKilled();
+                    _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
 
@@ -144,25 +152,26 @@ namespace Source.Models
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.GetComponent<Airplane>() is not null &&
-                (other.gameObject.transform.position - transform.position).magnitude < 40)
+                (other.gameObject.transform.position - transform.position).magnitude < radius)
             {
+                Debug.Log("aaaa");
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
-                GameController.AirplaneKilled();
+                _gameController.AirplaneKilled();
             }
 
             if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
                 _downLocalScale = true;
-                GameController.AddPoints(AirplaneTypes.Basic);
-                GameController.AirplaneKilled();
+                _gameController.AddPoints(AirplaneTypes.Basic);
+                _gameController.AirplaneKilled();
             }
 
             if (other.gameObject.CompareTag("money"))
             {
                 Destroy(other.gameObject);
-                GameController.CollectedMoney();
+                _gameController.CollectedMoney();
             }
         }
 
@@ -192,7 +201,8 @@ namespace Source.Models
         {
             if (_path.Count > 0)
             {
-                transform.position += _delta;
+                transform.position += transform.up * speed;
+                //transform.position += new Vector3((float)Math.Cos(transform.rotation.z * Math.PI / 180), (float)Math.Sin(transform.rotation.z * Math.PI / 180), 0);
                 RotateAirplaneToPathPoint();
 
                 if (Vector2.Distance(_path[0].transform.position, Position) < eps)
@@ -204,9 +214,10 @@ namespace Source.Models
         {
             var difference = transform.position - _path[0].transform.position;
             difference.Normalize();
+            
+            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, rotZ), speed * 2 * Time.deltaTime);
 
-            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
         }
 
         private void NextPathPoint()

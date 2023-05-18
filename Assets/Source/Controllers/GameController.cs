@@ -16,40 +16,55 @@ namespace Source.Controllers
 
         [SerializeField] [Header("Объект контроллера самолетов")]
         private GameObject airplanesControllerSource;
-        
+
         [SerializeField] [Header("Контроллер монеток")]
         protected GameObject moneyController;
 
-        private static MoneyController _moneyController;
-        private static AirplanesController _airplanesController;
-        private static int _heal;
-        private static int _points;
-        private static int _money;
+        [SerializeField] [Header("Объекты жизней")]
+        private GameObject[] healsObjects;
 
-        public static void AddPoints(AirplaneTypes airplaneType)
+        [SerializeField] [Header("Спрайт пустого сердечка")]
+        private Sprite emptyHeal;
+
+        [SerializeField] [Header("Спрайт полного сердечка")]
+        private Sprite fullHeal;
+
+        private MoneyController _moneyController;
+        private AirplanesController _airplanesController;
+        private int _heal;
+        private int _points;
+        private int _money;
+
+        public void AddPoints(AirplaneTypes airplaneType)
         {
             _points += (int)airplaneType;
         }
 
-        public static void AddHeals()
+        public void AddHeals()
         {
-            _heal += 2;
+            if (_heal < 5)
+            {
+                healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = fullHeal;
+                _heal++;
+            }
         }
 
-        public static void EndGame()
+        public void EndGame()
         {
             _heal = -1;
         }
 
-        public static void AirplaneKilled()
+        public void AirplaneKilled()
         {
             _airplanesController.KilledAirplane();
             _heal--;
+            if(_heal >= 0)
+                healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = emptyHeal;
         }
 
-        public static void CollectedMoney()
+        public void CollectedMoney()
         {
-            _money += 1;
+            _money++;
             _moneyController.KilledMoney();
         }
 
@@ -69,7 +84,7 @@ namespace Source.Controllers
 
         private void Update()
         {
-            if (_heal < 0)
+            if (_heal <= 0)
             {
                 SaveAllToDisk();
                 SceneManager.LoadScene(gameOverSceneName);
@@ -81,12 +96,12 @@ namespace Source.Controllers
             if (PlayerPrefs.HasKey("record"))
             {
                 var record = PlayerPrefs.GetInt("record");
-                if (_points > record) 
+                if (_points > record)
                     PlayerPrefs.SetInt("record", _points);
             }
             else
                 PlayerPrefs.SetInt("record", _points);
-            
+
             PlayerPrefs.SetInt("money", _money);
             PlayerPrefs.Save();
         }

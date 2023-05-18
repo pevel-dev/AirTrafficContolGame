@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 7921346126584957212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 753222980280700427}
@@ -139,14 +139,15 @@ MonoBehaviour:
   parentPrefabPoints: {fileID: 0}
   prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
   airplanePrefab: {fileID: 7921346126584957212}
-  downScaleSpeed: 0.002
-  speed: 75
-  minimalLandingLength: 100
-  mouseMult: 30
-  lifeTime: 100
+  downScaleSpeed: 0.01
+  speed: 0.1
+  minimalLandingLength: 50
+  mouseMult: 1
+  lifeTime: 50
   eps: 10
   widthLine: 3
   lineColor: {r: 0, g: 0, b: 0, a: 0}
+  radius: 80
 --- !u!58 &3218489207001963325
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +282,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 200, y: 200}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
 --- !u!96 &5957730368296325046
 TrailRenderer:
