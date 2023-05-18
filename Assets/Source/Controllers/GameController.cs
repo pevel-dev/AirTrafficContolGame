@@ -1,5 +1,6 @@
 ﻿using System;
 using Source.Models;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -29,6 +30,13 @@ namespace Source.Controllers
         [SerializeField] [Header("Спрайт полного сердечка")]
         private Sprite fullHeal;
 
+        [SerializeField] [Header("Объект текста для монет")]
+        private TMP_Text moneyText;
+
+        [SerializeField] [Header("Объект текста для очков")]
+        private TMP_Text pointText;
+
+
         private MoneyController _moneyController;
         private AirplanesController _airplanesController;
         private int _heal;
@@ -38,6 +46,7 @@ namespace Source.Controllers
         public void AddPoints(AirplaneTypes airplaneType)
         {
             _points += (int)airplaneType;
+            UpdateText();
         }
 
         public void AddHeals()
@@ -58,7 +67,7 @@ namespace Source.Controllers
         {
             _airplanesController.KilledAirplane();
             _heal--;
-            if(_heal >= 0)
+            if (_heal >= 0)
                 healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = emptyHeal;
         }
 
@@ -66,6 +75,7 @@ namespace Source.Controllers
         {
             _money++;
             _moneyController.KilledMoney();
+            UpdateText();
         }
 
         private void Awake()
@@ -80,6 +90,9 @@ namespace Source.Controllers
                 _money = 0;
                 PlayerPrefs.SetInt("money", 0);
             }
+
+            UpdateText();
+
         }
 
         private void Update()
@@ -96,6 +109,12 @@ namespace Source.Controllers
             PlayerPrefs.SetInt("lastResult", _points);
             PlayerPrefs.SetInt("money", _money);
             PlayerPrefs.Save();
+        }
+
+        private void UpdateText()
+        {
+            moneyText.text = _money.ToString();
+            pointText.text = _points.ToString();
         }
     }
 }

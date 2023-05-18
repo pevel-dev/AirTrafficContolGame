@@ -633,6 +633,13 @@ MonoBehaviour:
   - {fileID: 1493448271}
   - {fileID: 446362760}
   - {fileID: 443496112}
+  - {fileID: 273853318}
+  - {fileID: 654209743}
+  - {fileID: 483515681}
+  - {fileID: 137976544}
+  - {fileID: 820043585}
+  - {fileID: 112658383}
+  - {fileID: 704090301}
 --- !u!4 &148107308
 Transform:
   m_ObjectHideFlags: 0
@@ -4071,7 +4078,7 @@ MonoBehaviour:
   - {fileID: 483515683}
   - {fileID: 137976546}
   - {fileID: 820043587}
-  _textPlayerName: {fileID: 274860004}
+  textPlayerName: {fileID: 274860004}
   textResult: {fileID: 112658384}
 --- !u!1 &1348765630
 GameObject:
