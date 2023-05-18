@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Source.Controllers;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Source.Models
 {
@@ -197,7 +201,8 @@ namespace Source.Models
         {
             if (_path.Count > 0)
             {
-                transform.position += _delta;
+                transform.position += transform.up * speed;
+                //transform.position += new Vector3((float)Math.Cos(transform.rotation.z * Math.PI / 180), (float)Math.Sin(transform.rotation.z * Math.PI / 180), 0);
                 RotateAirplaneToPathPoint();
 
                 if (Vector2.Distance(_path[0].transform.position, Position) < eps)
@@ -209,9 +214,10 @@ namespace Source.Models
         {
             var difference = transform.position - _path[0].transform.position;
             difference.Normalize();
+            
+            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, rotZ), speed * 2 * Time.deltaTime);
 
-            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 90);
         }
 
         private void NextPathPoint()

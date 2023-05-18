@@ -8,16 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Airplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Airplane.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Heal AIrplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Heal AIrplane.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthBar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MilitaryAirplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilitaryAirplane.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/HealAirplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/HealAirplane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/HealthBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/heals.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/heals.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
