@@ -8,7 +8,7 @@ namespace Source.Models
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.GetComponent<Airplane>() is not null &&
-                (other.gameObject.transform.position - transform.position).magnitude < 40)
+                (other.gameObject.transform.position - transform.position).magnitude < radius)
             {
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");

@@ -42,7 +42,11 @@ namespace Source.Controllers
 
         public void AddHeals()
         {
-            _heal += 2;
+            if (_heal < 5)
+            {
+                healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = fullHeal;
+                _heal++;
+            }
         }
 
         public void EndGame()
@@ -54,11 +58,13 @@ namespace Source.Controllers
         {
             _airplanesController.KilledAirplane();
             _heal--;
+            if(_heal >= 0)
+                healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = emptyHeal;
         }
 
         public void CollectedMoney()
         {
-            _money += 1;
+            _money++;
             _moneyController.KilledMoney();
         }
 
@@ -78,7 +84,7 @@ namespace Source.Controllers
 
         private void Update()
         {
-            if (_heal < 0)
+            if (_heal <= 0)
             {
                 SaveAllToDisk();
                 SceneManager.LoadScene(gameOverSceneName);

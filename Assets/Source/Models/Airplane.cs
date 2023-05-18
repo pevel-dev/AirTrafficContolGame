@@ -50,8 +50,10 @@ namespace Source.Models
 
         [SerializeField] [Header("Цвет путевой линии")]
         private Color lineColor;
-        
 
+        [SerializeField] [Header("Радиус")] 
+        protected int radius;
+        
         protected GameController _gameController;
         private PathLine _linesPath;
         private HealthBar _healthBar;
@@ -146,8 +148,9 @@ namespace Source.Models
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.GetComponent<Airplane>() is not null &&
-                (other.gameObject.transform.position - transform.position).magnitude < 40)
+                (other.gameObject.transform.position - transform.position).magnitude < radius)
             {
+                Debug.Log("aaaa");
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
                 _gameController.AirplaneKilled();
