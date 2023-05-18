@@ -109,7 +109,7 @@ namespace Source.Models
                     _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
-
+            
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
             UpdateDelta();
@@ -178,8 +178,8 @@ namespace Source.Models
         #endregion
 
         private bool IsAlive()
-            => _healthBar.Status() && transform.position.x is >= 0 and <= 1920 &&
-               transform.position.y is >= 0 and <= 1080;
+            => _healthBar.Status() && _path[0].transform.position.x is >= 0 and <= 1920 &&
+               _path[0].transform.position.y is >= 0 and <= 1080;
 
         private void UpdateLocalScale()
         {
