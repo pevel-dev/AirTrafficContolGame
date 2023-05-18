@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e97b04a-f40a-4e57-9db0-3b429906791f" name="Changes" comment="cloudScene" />
+    <list default="true" id="2e97b04a-f40a-4e57-9db0-3b429906791f" name="Changes" comment="cloudScene">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Controllers/AirplanesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Controllers/AirplanesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/HealAirplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/HealAirplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;features&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cloudsScene&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -80,10 +89,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28832">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28832" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -116,6 +125,7 @@
       <workItem from="1684019241797" duration="82000" />
       <workItem from="1684092916196" duration="1038000" />
       <workItem from="1684156954772" duration="823000" />
+      <workItem from="1684428851775" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="что-то">
       <created>1683841597116</created>

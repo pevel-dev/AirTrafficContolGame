@@ -13,19 +13,19 @@ namespace Source.Models
             {
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
-                GameController.AirplaneKilled();
+                _gameController.AirplaneKilled();
             }
 
             if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
                 // TODO: Анимация взрыва
-                GameController.EndGame();
+                _gameController.EndGame();
             }
             if (other.gameObject.CompareTag("money"))
             {
                 Destroy(other.gameObject);
-                GameController.CollectedMoney();
+                _gameController.CollectedMoney();
             }
         }
         public new void OnBeginDrag(PointerEventData eventData)
@@ -38,7 +38,7 @@ namespace Source.Models
         public new void OnEndDrag(PointerEventData eventData)
         {
             // TODO: Анимация взрыва
-            GameController.EndGame();
+            _gameController.EndGame();
         }
         private void OnMouseOver()
         {

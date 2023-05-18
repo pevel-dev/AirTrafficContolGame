@@ -31,6 +31,9 @@ namespace Source.Controllers
 
         [SerializeField] [Header("Размер спавна по Y")]
         private int spawnY;
+        
+        [SerializeField] [Header("Объект gameconroller")]
+        private GameObject gameControllerSource;
 
         private static int _airplaneCount;
         private readonly Stopwatch _timeFromLastPlane = new();
@@ -63,7 +66,7 @@ namespace Source.Controllers
             var airplane = Instantiate(prefabAirplane[_random.Next(0, prefabAirplane.Length)], path[0], Quaternion.identity).GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
-            airplane.InitializeAirplane(path);
+            airplane.InitializeAirplane(path, gameControllerSource.GetComponent<GameController>());
         }
 
         private List<Vector3> GetRandomStartEnd()

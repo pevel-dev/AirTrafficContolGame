@@ -25,7 +25,7 @@ namespace Source.Models
 
         [FormerlySerializedAs("airplane")] [SerializeField] [Header("Префаб самолета")]
         protected GameObject airplanePrefab;
-        
+
 
         [SerializeField] [Header("Скорость уменьшения самолета при снижении")]
         private float downScaleSpeed;
@@ -50,8 +50,9 @@ namespace Source.Models
 
         [SerializeField] [Header("Цвет путевой линии")]
         private Color lineColor;
+        
 
-
+        protected GameController _gameController;
         private PathLine _linesPath;
         private HealthBar _healthBar;
         protected bool _downLocalScale;
@@ -66,10 +67,11 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
         }
 
-        public void InitializeAirplane(List<Vector3> path)
+        public void InitializeAirplane(List<Vector3> path, GameController gameController)
         {
             LoadPath(path);
             UpdateDelta();
+            _gameController = gameController;
         }
 
         private void LoadPath(List<Vector3> path)
@@ -98,7 +100,7 @@ namespace Source.Models
             if (!IsAlive())
             {
                 if (!_downLocalScale)
-                    GameController.AirplaneKilled();
+                    _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
 
@@ -148,21 +150,21 @@ namespace Source.Models
             {
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
-                GameController.AirplaneKilled();
+                _gameController.AirplaneKilled();
             }
 
             if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
                 _downLocalScale = true;
-                GameController.AddPoints(AirplaneTypes.Basic);
-                GameController.AirplaneKilled();
+                _gameController.AddPoints(AirplaneTypes.Basic);
+                _gameController.AirplaneKilled();
             }
 
             if (other.gameObject.CompareTag("money"))
             {
                 Destroy(other.gameObject);
-                GameController.CollectedMoney();
+                _gameController.CollectedMoney();
             }
         }
 
