@@ -14,6 +14,13 @@ namespace Source.Controllers
         [SerializeField] [Header("Префабы самолетов")]
         private GameObject[] prefabAirplane;
 
+        /// <summary>
+        /// Указываются правые границы инетрвалов для каждого объекта.
+        /// см. алгоритм генерации
+        /// </summary>
+        [SerializeField] [Header("Шансы спавна самолетов")]
+        private int[] randomWeights;
+
         [SerializeField] [Header("Ссылка на экран")]
         private GameObject canvasScreen;
 
@@ -22,7 +29,7 @@ namespace Source.Controllers
 
         [SerializeField] [Header("Начальный лимит спавна самолетов")]
         private int startAirplaneLimit;
-        
+
         [SerializeField] [Header("Лимит спавна самолетов")]
         private AnimationCurve airplaneLimitCurve;
 
@@ -31,7 +38,7 @@ namespace Source.Controllers
 
         [SerializeField] [Header("Размер спавна по Y")]
         private int spawnY;
-        
+
         [SerializeField] [Header("Объект gameconroller")]
         private GameObject gameControllerSource;
 
@@ -43,7 +50,7 @@ namespace Source.Controllers
 
         private void Awake()
         {
-            _currentTime = 0;   
+            _currentTime = 0;
             _timeFromLastPlane.Start();
             _airplaneCount = 0;
         }
@@ -60,10 +67,13 @@ namespace Source.Controllers
             }
         }
 
+
         private void NewRandomPlane()
         {
             var path = GetRandomStartEnd();
-            var airplane = Instantiate(prefabAirplane[_random.Next(0, prefabAirplane.Length)], path[0], Quaternion.identity).GetComponent<Airplane>();
+            var airplane =
+                Instantiate(prefabAirplane[RandomAirplanePrefabIndexWithWeight()], path[0], Quaternion.identity)
+                    .GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
             airplane.InitializeAirplane(path, gameControllerSource.GetComponent<GameController>());
@@ -84,7 +94,27 @@ namespace Source.Controllers
                 new(_random.Next(0, spawnX), _random.Next(0, spawnY)),
             };
         }
-        
+
+        private int RandomAirplanePrefabIndexWithWeight()
+        {
+            var randomNum = _random.Next(0, 100);
+            for (var i = 0; i < randomWeights.Length; i++)
+            {
+                if (i == 0)
+                {
+                    if (randomNum <= randomWeights[i])
+                        return i;
+                }
+                else
+                {
+                    if (randomWeights[i - 1] < randomNum && randomNum <= randomWeights[i])
+                        return i;
+                }
+            }
+
+            return 0;
+        }
+
         public void KilledAirplane()
         {
             _airplaneCount--;
