@@ -144,7 +144,9 @@ namespace Source.Models
             var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
             if (mouseWheelScroll != 0)
             {
-                speed += mouseWheelScroll * mouseMult;
+                var newSpeed = speed + mouseWheelScroll * mouseMult;
+                if (newSpeed > 0 && newSpeed < 100)
+                    speed = newSpeed;
                 UpdateDelta();
             }
         }
@@ -154,7 +156,6 @@ namespace Source.Models
             if (other.gameObject.GetComponent<Airplane>() is not null &&
                 (other.gameObject.transform.position - transform.position).magnitude < radius)
             {
-                Debug.Log("aaaa");
                 _downLocalScale = true;
                 airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
                 _gameController.AirplaneKilled();

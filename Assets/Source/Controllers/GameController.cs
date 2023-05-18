@@ -93,15 +93,7 @@ namespace Source.Controllers
 
         private void SaveAllToDisk()
         {
-            if (PlayerPrefs.HasKey("record"))
-            {
-                var record = PlayerPrefs.GetInt("record");
-                if (_points > record)
-                    PlayerPrefs.SetInt("record", _points);
-            }
-            else
-                PlayerPrefs.SetInt("record", _points);
-
+            PlayerPrefs.SetInt("lastResult", _points);
             PlayerPrefs.SetInt("money", _money);
             PlayerPrefs.Save();
         }

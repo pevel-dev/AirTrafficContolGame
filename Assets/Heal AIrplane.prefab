@@ -257,7 +257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 100}
+  m_Size: {x: 150, y: 150}
   m_EdgeRadius: 0
 --- !u!96 &5957730368296325046
 TrailRenderer:
@@ -392,9 +392,9 @@ MonoBehaviour:
   parentPrefabPoints: {fileID: 0}
   prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
   airplanePrefab: {fileID: 7921346126584957212}
-  downScaleSpeed: 0.01
+  downScaleSpeed: 0.005
   speed: 0.1
-  minimalLandingLength: 50
+  minimalLandingLength: 100
   mouseMult: 1
   lifeTime: 100
   eps: 10

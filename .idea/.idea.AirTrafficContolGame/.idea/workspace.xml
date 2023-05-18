@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e97b04a-f40a-4e57-9db0-3b429906791f" name="Changes" comment="cloudScene">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Controllers/LeaderboardController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Controllers/LeaderboardController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Airplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Airplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Heal AIrplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Heal AIrplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MilitaryAirplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilitaryAirplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOverScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOverScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +33,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/55f52f339135403a86926b9800a4c32b15a00/82/8619e33f/02000002pdb4.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/3c/f75f2988/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Controllers/CloudsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Controllers/LeaderboardContoller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/repos/AirTrafficContolGame/Assets/Source/Models/Airplane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Models/Cloud.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Models/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
