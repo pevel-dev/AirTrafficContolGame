@@ -78,6 +78,11 @@ namespace Source.Controllers
             UpdateText();
         }
 
+        public void AirplaneDown()
+        {
+            _airplanesController.KilledAirplane();
+        }
+
         private void Awake()
         {
             _airplanesController = airplanesControllerSource.GetComponent<AirplanesController>();
@@ -92,7 +97,6 @@ namespace Source.Controllers
             }
 
             UpdateText();
-
         }
 
         private void Update()

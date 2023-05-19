@@ -166,7 +166,7 @@ namespace Source.Models
             {
                 _downLocalScale = true;
                 _gameController.AddPoints(AirplaneTypes.Basic);
-                _gameController.AirplaneKilled();
+                _gameController.AirplaneDown();
             }
 
             if (other.gameObject.CompareTag("money"))

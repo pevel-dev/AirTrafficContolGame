@@ -13000,7 +13000,7 @@ MonoBehaviour:
   - {fileID: 7921346126584957212, guid: e64aec8dee0a76b4680558cbc81a2751, type: 3}
   - {fileID: 7921346126584957212, guid: 6095789d250dc5d48b2c3195e33b01c3, type: 3}
   - {fileID: 7921346126584957212, guid: 6d49eec14bbf2cf41aa150f2a2db78c5, type: 3}
-  randomWeights: 460000005a00000064000000
+  randomWeights: 010000005a00000064000000
   canvasScreen: {fileID: 1074767257}
   coolDown: 5
   startAirplaneLimit: 5

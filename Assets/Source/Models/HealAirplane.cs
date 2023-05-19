@@ -21,6 +21,7 @@ namespace Source.Models
                 _downLocalScale = true;
                 _gameController.AddPoints(AirplaneTypes.Gold);
                 _gameController.AddHeals();
+                _gameController.AirplaneDown();
             }
             if (other.gameObject.CompareTag("money"))
             {
