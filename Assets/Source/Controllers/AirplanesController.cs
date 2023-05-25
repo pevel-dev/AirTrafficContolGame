@@ -76,7 +76,7 @@ namespace Source.Controllers
                     .GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
-            airplane.InitializeAirplane(path, gameControllerSource.GetComponent<GameController>());
+            airplane.InitializeAirplane(path[1], gameControllerSource.GetComponent<GameController>());
         }
 
         private List<Vector3> GetRandomStartEnd()

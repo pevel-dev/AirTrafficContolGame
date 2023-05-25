@@ -30,7 +30,6 @@ namespace Source.Models
         [FormerlySerializedAs("airplane")] [SerializeField] [Header("Префаб самолета")]
         protected GameObject airplanePrefab;
 
-
         [SerializeField] [Header("Скорость уменьшения самолета при снижении")]
         private float downScaleSpeed;
 
@@ -73,22 +72,18 @@ namespace Source.Models
                 yield return pathPoint.transform.position;
         }
 
-        public void InitializeAirplane(List<Vector3> path, GameController gameController)
+        public void InitializeAirplane(Vector3 end, GameController gameController)
         {
-            LoadPath(path);
+            LoadPath(end);
             UpdateDelta();
             _gameController = gameController;
         }
 
-        private void LoadPath(List<Vector3> path)
+        private void LoadPath(Vector3 end)
         {
-            foreach (var pathPoint in path.Skip(1))
-            {
-                var pathPointObject = Instantiate(prefabPoint, transform);
-                pathPointObject.transform.position = pathPoint;
-                pathPointObject.transform.SetParent(parentPrefabPoints.transform);
-                _path.Add(pathPointObject);
-            }
+            var pathPointObject = Instantiate(prefabPoint, parentPrefabPoints.transform); 
+            pathPointObject.transform.position = end; 
+            _path.Add(pathPointObject);
         }
 
         #region unityEvents
@@ -109,9 +104,15 @@ namespace Source.Models
                     _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
-            
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
+            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
+            if (mouseWheelScroll != 0)
+            {
+                var newSpeed = speed + mouseWheelScroll * mouseMult;
+                if (newSpeed is > 0 and < 100)
+                    speed = newSpeed;
+            }
             UpdateDelta();
             UpdateLocalScale();
         }
@@ -137,19 +138,7 @@ namespace Source.Models
             _path[0].transform.position = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
         }
-
-
-        private void OnMouseOver()
-        {
-            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
-            if (mouseWheelScroll != 0)
-            {
-                var newSpeed = speed + mouseWheelScroll * mouseMult;
-                if (newSpeed > 0 && newSpeed < 100)
-                    speed = newSpeed;
-                UpdateDelta();
-            }
-        }
+        
 
         private void OnTriggerEnter2D(Collider2D other)
         {
