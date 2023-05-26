@@ -135,13 +135,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c9a850f464343983194d6d699fdcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8, type: 3}
+  prefabPoint: {fileID: 4311094398580345960, guid: 5ec74b581de3f3d41a7885969f3789c8,
+    type: 3}
   parentPrefabPoints: {fileID: 0}
-  prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7, type: 3}
+  prefabHealthBar: {fileID: 1535696652106536427, guid: 709ce260cfee8cd49a16a485fe4b1ee7,
+    type: 3}
   airplanePrefab: {fileID: 7921346126584957212}
   downScaleSpeed: 0.2
   speed: 0
-  minimalLandingLength: 100
+  minimalLandingLength: 200
   mouseMult: 1
   lifeTime: 50
   eps: 10
@@ -282,7 +284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 150, y: 150}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
 --- !u!96 &5957730368296325046
 TrailRenderer:
