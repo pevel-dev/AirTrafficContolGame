@@ -64,6 +64,7 @@ namespace Source.Models
         private Vector3 _delta;
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
+        private static float Speed { get; set; }
 
         private IEnumerable<Vector3> Path()
         {
@@ -90,6 +91,10 @@ namespace Source.Models
 
         private void Awake()
         {
+            if (Speed == 0)
+                Speed = speed;
+            else
+                speed = Speed;
             InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
             _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
@@ -106,15 +111,19 @@ namespace Source.Models
             }
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
-            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
-            if (mouseWheelScroll != 0)
-            {
-                var newSpeed = speed + mouseWheelScroll * mouseMult;
-                if (newSpeed is > 0 and < 100)
-                    speed = newSpeed;
-            }
+            CheckMouseScroll();
             UpdateDelta();
             UpdateLocalScale();
+        }
+
+        private void CheckMouseScroll()
+        {
+            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
+            if (mouseWheelScroll == 0) return;
+            var newSpeed = speed + mouseWheelScroll * mouseMult;
+            if (newSpeed is <= 0 or >= 100) return;
+            speed = newSpeed;
+            Speed = newSpeed;
         }
 
         private void OnDestroy()
