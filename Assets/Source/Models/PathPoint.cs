@@ -21,7 +21,11 @@ namespace Source.Models
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("RunwayLandingZone"))
+            {
+                Debug.Log("FFFF");
                 OnCollisionInRunwayZone = true;
+
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)

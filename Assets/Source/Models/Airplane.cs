@@ -34,13 +34,13 @@ namespace Source.Models
         private float downScaleSpeed;
 
         [SerializeField] [Header("Скорость самолета")]
-        private float speed;
+        protected float speed;
 
         [FormerlySerializedAs("MinimalLandingLength")] [SerializeField] [Header("Минимальное расстояние для посадки")]
         protected float minimalLandingLength;
 
         [FormerlySerializedAs("MouseMult")] [SerializeField] [Header("Мультипликатор мыши")]
-        private float mouseMult;
+        protected float mouseMult;
 
         [SerializeField] [Header("Время жизни саомлета в секундах")]
         private float lifeTime;
@@ -54,19 +54,17 @@ namespace Source.Models
         [SerializeField] [Header("Цвет путевой линии")]
         private Color lineColor;
 
-        [SerializeField] [Header("Радиус")] 
-        protected int radius;
-        
+        [SerializeField] [Header("Радиус")] protected int radius;
+
         protected GameController _gameController;
-        private PathLine _linesPath;
-        private HealthBar _healthBar;
+        protected PathLine _linesPath;
+        protected HealthBar _healthBar;
         protected bool _downLocalScale;
         private Vector3 _delta;
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
-        private static float Speed { get; set; }
 
-        private IEnumerable<Vector3> Path()
+        protected IEnumerable<Vector3> Path()
         {
             yield return transform.position;
             foreach (var pathPoint in _path)
@@ -82,8 +80,8 @@ namespace Source.Models
 
         private void LoadPath(Vector3 end)
         {
-            var pathPointObject = Instantiate(prefabPoint, parentPrefabPoints.transform); 
-            pathPointObject.transform.position = end; 
+            var pathPointObject = Instantiate(prefabPoint, parentPrefabPoints.transform);
+            pathPointObject.transform.position = end;
             _path.Add(pathPointObject);
         }
 
@@ -91,10 +89,6 @@ namespace Source.Models
 
         private void Awake()
         {
-            if (Speed == 0)
-                Speed = speed;
-            else
-                speed = Speed;
             InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
             _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
@@ -109,21 +103,19 @@ namespace Source.Models
                     _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
+
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
-            CheckMouseScroll();
+            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
+            if (mouseWheelScroll != 0)
+            {
+                var newSpeed = speed + mouseWheelScroll * mouseMult;
+                if (newSpeed is > 0 and < 100)
+                    speed = newSpeed;
+            }
+
             UpdateDelta();
             UpdateLocalScale();
-        }
-
-        private void CheckMouseScroll()
-        {
-            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
-            if (mouseWheelScroll == 0) return;
-            var newSpeed = speed + mouseWheelScroll * mouseMult;
-            if (newSpeed is <= 0 or >= 100) return;
-            speed = newSpeed;
-            Speed = newSpeed;
         }
 
         private void OnDestroy()
@@ -144,10 +136,15 @@ namespace Source.Models
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            _path[0].transform.position = Camera.allCameras[0]
+            var newPos = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            if (newPos.x is >= 0 and <= 1920 &&
+                newPos.y is >= 0 and <= 1080)
+            {
+                _path[0].transform.position = newPos;
+            }
         }
-        
+
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -159,7 +156,13 @@ namespace Source.Models
                 _gameController.AirplaneKilled();
             }
 
-            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
+            if (other.gameObject.CompareTag("RunwayLandingZone"))
+            {
+                // Debug.Log(_path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone);
+                // Debug.Log((_path[^1].transform.position - transform.position).magnitude);
+            }
+
+            if (other.gameObject.CompareTag("RunwayLandingZone") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
                 _downLocalScale = true;
@@ -180,7 +183,7 @@ namespace Source.Models
             => _healthBar.Status() && _path[0].transform.position.x is >= 0 and <= 1920 &&
                _path[0].transform.position.y is >= 0 and <= 1080;
 
-        private void UpdateLocalScale()
+        protected void UpdateLocalScale()
         {
             if (_downLocalScale)
                 transform.localScale -= new Vector3(downScaleSpeed, downScaleSpeed, downScaleSpeed);
@@ -196,7 +199,7 @@ namespace Source.Models
             _healthBar.Initialize(lifeTime);
         }
 
-        private void UpdatePosition()
+        protected void UpdatePosition()
         {
             if (_path.Count > 0)
             {
@@ -213,10 +216,10 @@ namespace Source.Models
         {
             var difference = transform.position - _path[0].transform.position;
             difference.Normalize();
-            
-            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, rotZ), speed * 2 * Time.deltaTime);
 
+            var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, rotZ),
+                speed * 2 * Time.deltaTime);
         }
 
         private void NextPathPoint()
@@ -233,7 +236,7 @@ namespace Source.Models
             }
         }
 
-        private void UpdateDelta()
+        protected void UpdateDelta()
         {
             if (_path.Count > 0)
                 _delta = (_path[0].transform.position - transform.position).normalized * (speed * Time.deltaTime);
