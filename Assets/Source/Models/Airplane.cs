@@ -34,13 +34,13 @@ namespace Source.Models
         private float downScaleSpeed;
 
         [SerializeField] [Header("Скорость самолета")]
-        protected float speed;
+        private float speed;
 
         [FormerlySerializedAs("MinimalLandingLength")] [SerializeField] [Header("Минимальное расстояние для посадки")]
         protected float minimalLandingLength;
 
         [FormerlySerializedAs("MouseMult")] [SerializeField] [Header("Мультипликатор мыши")]
-        protected float mouseMult;
+        private float mouseMult;
 
         [SerializeField] [Header("Время жизни саомлета в секундах")]
         private float lifeTime;
@@ -54,17 +54,18 @@ namespace Source.Models
         [SerializeField] [Header("Цвет путевой линии")]
         private Color lineColor;
 
-        [SerializeField] [Header("Радиус")] protected int radius;
-
+        [SerializeField] [Header("Радиус")] 
+        protected int radius;
+        
         protected GameController _gameController;
-        protected PathLine _linesPath;
-        protected HealthBar _healthBar;
+        private PathLine _linesPath;
+        private HealthBar _healthBar;
         protected bool _downLocalScale;
         private Vector3 _delta;
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
 
-        protected IEnumerable<Vector3> Path()
+        private IEnumerable<Vector3> Path()
         {
             yield return transform.position;
             foreach (var pathPoint in _path)
@@ -80,8 +81,8 @@ namespace Source.Models
 
         private void LoadPath(Vector3 end)
         {
-            var pathPointObject = Instantiate(prefabPoint, parentPrefabPoints.transform);
-            pathPointObject.transform.position = end;
+            var pathPointObject = Instantiate(prefabPoint, parentPrefabPoints.transform); 
+            pathPointObject.transform.position = end; 
             _path.Add(pathPointObject);
         }
 
@@ -89,6 +90,10 @@ namespace Source.Models
 
         private void Awake()
         {
+            if (Speed == 0)
+                Speed = speed;
+            else
+                speed = Speed;
             InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
             _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
@@ -103,19 +108,21 @@ namespace Source.Models
                     _gameController.AirplaneKilled();
                 _downLocalScale = true;
             }
-
             UpdatePosition();
             _linesPath.UpdatePosition(Path().ToList());
-            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
-            if (mouseWheelScroll != 0)
-            {
-                var newSpeed = speed + mouseWheelScroll * mouseMult;
-                if (newSpeed is > 0 and < 100)
-                    speed = newSpeed;
-            }
-
+            CheckMouseScroll();
             UpdateDelta();
             UpdateLocalScale();
+        }
+
+        private void CheckMouseScroll()
+        {
+            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
+            if (mouseWheelScroll == 0) return;
+            var newSpeed = speed + mouseWheelScroll * mouseMult;
+            if (newSpeed is <= 0 or >= 100) return;
+            speed = newSpeed;
+            Speed = newSpeed;
         }
 
         private void OnDestroy()
@@ -144,7 +151,7 @@ namespace Source.Models
                 _path[0].transform.position = newPos;
             }
         }
-
+        
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -216,7 +223,7 @@ namespace Source.Models
         {
             var difference = transform.position - _path[0].transform.position;
             difference.Normalize();
-
+            
             var rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, rotZ),
                 speed * 2 * Time.deltaTime);
