@@ -1,16 +1,902 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="827e2076-edd4-4aa1-8c08-b1460bfef5b6" name="Changes" comment="" />
+    <list default="true" id="827e2076-edd4-4aa1-8c08-b1460bfef5b6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Airplane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Airplane.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/AirplaneAnimationController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/AirplaneAnimationController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Coin_Controller.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Coin_Controller.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Coin_rotation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Coin_rotation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Plane_explosing.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation/Plane_explosing.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle_explosion/Circle_explosion9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coin.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coin/coin2_20x20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coin/coin2_20x20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explosion/Explosion9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/Lisense.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/Lisense.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/Prefab mountains and clounds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/Prefab mountains and clounds.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/Water animation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/Water animation.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_100.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_100.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_101.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_101.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_102.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_102.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_103.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_103.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_104.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_104.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_105.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_105.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_106.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_106.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_107.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_107.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_108.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_108.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_109.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_109.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_110.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_110.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_111.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_111.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_112.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_112.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_16.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_16.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_17.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_17.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_18.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_18.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_19.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_19.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_20.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_20.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_21.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_21.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_22.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_22.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_23.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_23.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_24.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_24.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_25.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_25.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_26.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_26.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_27.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_27.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_28.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_28.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_29.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_29.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_30.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_30.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_31.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_31.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_32.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_32.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_33.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_33.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_34.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_34.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_35.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_35.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_36.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_36.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_37.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_37.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_38.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_38.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_39.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_39.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_40.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_40.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_41.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_41.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_42.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_42.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_43.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_43.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_44.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_44.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_45.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_45.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_46.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_46.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_47.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_47.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_48.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_48.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_49.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_49.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_50.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_50.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_51.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_51.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_52.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_52.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_53.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_53.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_54.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_54.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_55.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_55.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_56.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_56.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_57.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_57.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_58.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_58.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_59.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_59.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_60.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_60.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_61.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_61.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_62.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_62.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_63.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_63.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_64.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_64.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_65.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_65.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_66.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_66.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_67.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_67.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_68.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_68.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_69.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_69.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_70.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_70.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_71.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_71.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_72.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_72.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_73.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_73.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_74.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_74.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_75.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_75.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_76.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_76.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_77.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_77.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_78.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_78.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_79.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_79.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_80.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_80.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_81.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_81.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_82.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_82.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_83.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_83.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_84.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_84.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_85.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_85.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_86.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_86.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_87.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_87.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_88.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_88.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_89.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_89.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_90.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_90.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_91.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_91.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_92.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_92.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_93.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_93.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_94.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_94.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_95.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_95.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_96.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_96.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_97.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_97.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_98.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_98.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_99.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld type 2_99.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld with shadows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld with shadows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PNG/overworld.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PREVIEWS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PREVIEWS/Examble 1b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PREVIEWS/Examble 1b.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PREVIEWS/Example 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Example.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Example.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Water Animation.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Water Animation.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Water.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/PSD/Water.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Forest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Forest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Plataformer Painted Style.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Runner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Runner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Snowy Forest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/You may also like/Pixel Art Snowy Forest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/contact.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/contact.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Free Pixel Art overworld tileset/readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Coin.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Coin.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Coin_Collect.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Coin_Collect.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Collider.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Collider.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Def_Plane.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Def_Plane.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Gold_Plane.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Gold_Plane.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Moving_Control.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Moving_Control.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/No_Fuel.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/No_Fuel.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Plane_Landing.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/Plane_Landing.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/War_Plane.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GIF/War_Plane.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Heal AIrplane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Heal AIrplane.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthBar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthBar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MilitaryAirplane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MilitaryAirplane.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pallets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pallets/Ground Palette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pallets/Ground Palette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pallets/ground Pallete.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pallets/ground Pallete.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PointOnScheme.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PointOnScheme.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/GameOverScreen.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/GameOverScreen.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/GameScreen.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/GameScreen.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/ShopScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/ShopScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/StartScreen.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes_original/StartScreen.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/GestioneShop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/GestioneShop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/SShop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/SShop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/.idea/.idea.Controllers.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/.idea/.idea.Controllers.dir/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/AirplanesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/AirplanesController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/CloudsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/CloudsController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/GameController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/GameController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/LeaderboardController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/LeaderboardController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/MoneyController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/MoneyController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/SmokeMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Controllers/SmokeMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/.idea/.idea.Models.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/.idea/.idea.Models.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/.idea/.idea.Models.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/.idea/.idea.Models.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/Airplane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/Airplane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/AirplaneTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/AirplaneTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/Cloud.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/Cloud.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/HealAirplane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/HealAirplane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/HealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/HealthBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/MilitaryAirplane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/MilitaryAirplane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/PathLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/PathLine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/PathPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Models/PathPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RadialFill.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RadialFill.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/.idea/.idea.Ui.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/.idea/.idea.Ui.dir/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/.idea/.idea.Ui.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/.idea/.idea.Ui.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/.idea/.idea.Ui.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/ButtonChangeScene.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/ButtonChangeScene.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/ChangeSpriteColor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/ChangeSpriteColor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Ui/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/230.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Clouds/cloud6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Gold_plane.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Gold_plane.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/RadialMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/RadialMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/Smoke.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/Smoke.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/airport.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/airport.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/pngaaa.com-395791.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Materials/pngaaa.com-395791.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Plane_Mark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/Plane_Mark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/airport.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/airport.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/heart2-empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/heart2-empty.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/heart2-shine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/heart2-shine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/papers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/papers/wallpaperflare.com_wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/papers/wallpaperflare.com_wallpaper.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/png-transparent-airplane-scalable-graphics-icon-aircraft-angle-aircraft-route-aircraft-design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/png-transparent-airplane-scalable-graphics-icon-aircraft-angle-aircraft-route-aircraft-design.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/pngwing.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/pngwing.com.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/runway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprites/runway.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Anton OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Anton.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Anton.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Oswald-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Fonts/Roboto-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Logo Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Ground - Surface Shader Scene.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Materials/Small Crate_diffuse.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/Text Popup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/Text Popup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Prefabs/TextMeshPro - Prefab 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Yellow to Orange - Vertical.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets/Yellow to Orange - Vertical.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials.zip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Sunny Days.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF - Sunny Days.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Glow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Glow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Logo.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF Logo.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Metalic Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Overlay.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Overlay.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Soft Mask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/LiberationSans SDF - Soft Mask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Surface.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF - Surface.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/Default Sprite Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/Default Sprite Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/DropCap Numbers.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Resources/Sprite Assets/DropCap Numbers.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/02 - Multi-line TextMesh Pro.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/02 - Multi-line TextMesh Pro.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/03 - Line Justification.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/03 - Line Justification.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/04 - Word Wrapping.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/04 - Word Wrapping.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/05 - Style Tags.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/05 - Style Tags.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/06 - Extra Rich Text Examples.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/06 - Extra Rich Text Examples.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/07 - Superscript &amp; Subscript Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/07 - Superscript &amp; Subscript Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/08 - Improved Text Alignment.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/08 - Improved Text Alignment.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/09 - Margin Tag Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/09 - Margin Tag Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/10 - Bullets &amp; Numbered List Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/10 - Bullets &amp; Numbered List Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/11 - The Style Tag.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/11 - The Style Tag.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/12 - Link Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/12 - Link Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/12a - Text Interactions.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/12a - Text Interactions.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/13 - Soft Hyphenation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/13 - Soft Hyphenation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/14 - Multi Font &amp; Sprites.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/14 - Multi Font &amp; Sprites.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/15 - Inline Graphics &amp; Sprites.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/15 - Inline Graphics &amp; Sprites.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/16 - Linked text overflow mode example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/16 - Linked text overflow mode example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/17 - Old Computer Terminal.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/17 - Old Computer Terminal.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/18 - ScrollRect &amp; Masking &amp; Layout.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/18 - ScrollRect &amp; Masking &amp; Layout.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/19 - Masking Texture &amp; Soft Mask.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/19 - Masking Texture &amp; Soft Mask.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/20 - Input Field with Scrollbar.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/20 - Input Field with Scrollbar.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/21 - Script Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/21 - Script Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/22 - Basic Scripting Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/22 - Basic Scripting Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/23 - Animating Vertex Attributes.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/23 - Animating Vertex Attributes.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/24 - Surface Shader Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/24 - Surface Shader Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/25 - Sunny Days Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/25 - Sunny Days Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/26 - Dropdown Placeholder Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/26 - Dropdown Placeholder Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/Benchmark (Floating Text).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scenes/Benchmark (Floating Text).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Sprites/Default Sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Sprites/Default Sprites.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Sprites/DropCap Numbers.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Sprites/DropCap Numbers.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Brushed Metal 3.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Floor Cement.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Floor Cement.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Floor Tiles 1 - diffuse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Floor Tiles 1 - diffuse.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Fruit Jelly (B&amp;W).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Fruit Jelly (B&amp;W).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Diagonal (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Diagonal (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Horizontal (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Horizontal (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Vertical (Color).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Gradient Vertical (Color).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Mask Zig-n-Zag.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Mask Zig-n-Zag.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_diffuse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_diffuse.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_normal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Small Crate_normal.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Sunny Days - Seamless.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Sunny Days - Seamless.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text Image 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text Image 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text UI Screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Text Overflow - Linked Text UI Screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Circle.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Circle.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Diagonal.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Diagonal.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Double.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Double.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Quad.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Examples &amp; Extras/Textures/Wipe Pattern - Radial Quad.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Black.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-BlackItalic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-BoldItalic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Italic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Light.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-LightItalic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Medium.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-MediumItalic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-Thin.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesque-ThinItalic.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesqueMono-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesqueMono-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesqueMono.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LabGrotesqueMono.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/LineBreaking Following Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Mobile.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne Attribution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonstola.ru_187341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonstola.ru_187341.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heals.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heals.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Paper_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Paper_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cerchio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cerchio.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cuore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cuore.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/stars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/stars.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/triangolo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/triangolo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pipk/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectId" id="2QVSdbETsyZIexOOzrwwkYYRbzY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Dexter\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Dexter\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Dexter\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="827e2076-edd4-4aa1-8c08-b1460bfef5b6" name="Changes" comment="" />
+      <created>1685437345838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685437345838</updated>
+      <workItem from="1685437347652" duration="322000" />
+      <workItem from="1685437989560" duration="7000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
 </project>

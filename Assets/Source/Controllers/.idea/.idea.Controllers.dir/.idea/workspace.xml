@@ -1,17 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5e7577f-8025-49f8-b293-41bf29f8fff3" name="Changes" comment="" />
+    <list default="true" id="a5e7577f-8025-49f8-b293-41bf29f8fff3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Example.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Example.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water Animation.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water Animation.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes_original/ShopScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes_original/ShopScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Script/GestioneShop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Script/GestioneShop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sprites/230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sprites/230.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tutorial.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tutorial.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fonstola.ru_187341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fonstola.ru_187341.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/Paper_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/Paper_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cerchio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cerchio.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cuore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cuore.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/stars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/stars.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/triangolo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/triangolo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Search.settings" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Models/Airplane.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Shop/PlaneSelection.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QW4X8zBxadPZY7L2G3YVe3gdKu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Dexter\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Dexter\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Dexter\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5e7577f-8025-49f8-b293-41bf29f8fff3" name="Changes" comment="" />
+      <created>1685456043823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685456043823</updated>
+      <workItem from="1685456047100" duration="710000" />
+      <workItem from="1685469810161" duration="4821000" />
+    </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
 </project>

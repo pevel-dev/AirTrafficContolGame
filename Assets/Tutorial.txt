@@ -1,9 +1,0 @@
-ita
-inserire oggetti da comprare come button,
-cambiare il nome del componente text del button con un numero  maggiore di quello del 
-button precedente
-
-eng
-insert items to buy as button,
-change the name of the text component of the button to a greater number than the
-previous button
