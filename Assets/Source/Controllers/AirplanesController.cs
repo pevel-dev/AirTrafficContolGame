@@ -50,12 +50,14 @@ namespace Source.Controllers
         private readonly Random _random = new();
         private int _currentAirplaneLimit;
         private float _currentTime;
+        private int _currentCheckedAirplane;
 
         private void Awake()
         {
             _currentTime = 0;
             _timeFromLastPlane.Start();
             _airplaneCount = 0;
+            _currentCheckedAirplane = 0;
         }
 
         private void Update()
@@ -74,8 +76,14 @@ namespace Source.Controllers
         private void NewRandomPlane()
         {
             var path = GetRandomStartEnd();
+
+            var randomPlaneValue = RandomAirplanePrefabIndexWithWeight();
+            var currentPrefab = randomPlaneValue == 0
+                ? prefabNormalAirplane[_currentCheckedAirplane]
+                : prefabAirplane[randomPlaneValue];
+
             var airplane =
-                Instantiate(prefabAirplane[RandomAirplanePrefabIndexWithWeight()], path[0], Quaternion.identity)
+                Instantiate(currentPrefab, path[0], Quaternion.identity)
                     .GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
@@ -121,6 +129,11 @@ namespace Source.Controllers
         public void KilledAirplane()
         {
             _airplaneCount--;
+        }
+
+        private int FindCurrentAirplane()
+        {
+            return PlayerPrefs.GetInt("equip", 0);
         }
     }
 }
