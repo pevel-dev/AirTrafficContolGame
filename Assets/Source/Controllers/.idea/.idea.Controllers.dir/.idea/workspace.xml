@@ -2,43 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e7577f-8025-49f8-b293-41bf29f8fff3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Canvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Canvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Example.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Example.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water Animation.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water Animation.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../Free Pixel Art overworld tileset/PSD/Water.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scenes_original/ShopScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scenes_original/ShopScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Script.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Script/GestioneShop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Script/GestioneShop.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Animation/AirplaneAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../../Animation/AirplaneAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes_original/Training.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scenes_original/Training.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sprites/230.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sprites/230.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fonstola.ru_187341.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fonstola.ru_187341.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/Paper_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/Paper_Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/cerchio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/cerchio.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/cuore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/cuore.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/stars.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/triangolo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image/triangolo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Airplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shop/PlaneSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shop/PlaneSelection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +17,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AirplanesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Models/Airplane.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Shop/PlaneSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Shop/PlaneSelection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,6 +56,7 @@
       <updated>1685456043823</updated>
       <workItem from="1685456047100" duration="710000" />
       <workItem from="1685469810161" duration="4821000" />
+      <workItem from="1685632397070" duration="15587000" />
     </task>
     <servers />
   </component>

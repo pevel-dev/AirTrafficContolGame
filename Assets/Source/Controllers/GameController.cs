@@ -42,6 +42,9 @@ namespace Source.Controllers
         private int _heal;
         private int _points;
         private int _money;
+        public AudioSource soundBoard;
+        public AudioClip healMinus;
+        public AudioClip healPlus;
 
         public void AddPoints(AirplaneTypes airplaneType)
         {
@@ -54,6 +57,7 @@ namespace Source.Controllers
             if (_heal < 5)
             {
                 healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = fullHeal;
+                soundBoard.PlayOneShot(healPlus);
                 _heal++;
             }
         }
@@ -66,6 +70,7 @@ namespace Source.Controllers
         public void AirplaneKilled()
         {
             _airplanesController.KilledAirplane();
+            soundBoard.PlayOneShot(healMinus);
             _heal--;
             if (_heal >= 0)
                 healsObjects[_heal].GetComponent<SpriteRenderer>().sprite = emptyHeal;
@@ -74,6 +79,7 @@ namespace Source.Controllers
         public void CollectedMoney()
         {
             _money++;
+            soundBoard.Play();
             _moneyController.KilledMoney();
             UpdateText();
         }
@@ -95,7 +101,7 @@ namespace Source.Controllers
                 _money = 0;
                 PlayerPrefs.SetInt("money", 0);
             }
-
+            soundBoard = GetComponent<AudioSource>();
             UpdateText();
         }
 

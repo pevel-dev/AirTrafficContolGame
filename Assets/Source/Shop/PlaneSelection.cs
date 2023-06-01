@@ -34,9 +34,17 @@ namespace Source.Shop
         private int _currentPlane;
         private int _equipedPlane;
 
+		private bool _isFirst;
+
         private int _money;
+
+		public AudioSource soundBoard;
+		public AudioClip buySound;
+		public AudioClip equipSound;
         private void Awake()
         {
+			_isFirst = true;
+			soundBoard = GetComponent<AudioSource>();
             for (var i = 1; i <= 2; i++)
             {
                 if (PlayerPrefs.GetInt($"skin{i}", 1) == 1)
@@ -69,6 +77,9 @@ namespace Source.Shop
                 transform.GetChild(i).gameObject.SetActive(i == index);
 
             _currentPlane = index;
+			if (_isFirst == false)
+				soundBoard.Play();
+			_isFirst = false;
             UpdateUI();
         }
 
@@ -103,6 +114,7 @@ namespace Source.Shop
 
             _money -= planePrices[_currentPlane];
             UpdateText();
+			soundBoard.PlayOneShot(buySound);
             planeUnlock[_currentPlane] = true;
             UpdateUI();
             SavePlanes();
@@ -112,6 +124,7 @@ namespace Source.Shop
         {
             if (planeUnlock[_currentPlane] && _equipedPlane != _currentPlane)
             {
+				soundBoard.PlayOneShot(equipSound);
                 _equipedPlane = _currentPlane;
                 PlayerPrefs.SetInt("equipedPlane", _currentPlane);
                 priceText.text = "выбран";
