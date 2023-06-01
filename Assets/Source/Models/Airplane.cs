@@ -100,6 +100,11 @@ namespace Source.Models
             _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
         }
 
+        private void Start()
+        {
+            airplanePrefab.GetComponent<Animator>().Play("Light");
+        }
+
 
         private void Update()
         {
