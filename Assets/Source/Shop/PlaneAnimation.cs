@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlaneAnimation : MonoBehaviour
 {
-    [SerializeField] private Vector3 finalPosition;
+    [SerializeField] 
+    private Vector3 finalPosition;
+    
     private Vector3 initialPosition;
     
     private void Awake()
