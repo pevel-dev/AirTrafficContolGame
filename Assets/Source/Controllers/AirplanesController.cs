@@ -14,6 +14,9 @@ namespace Source.Controllers
         [SerializeField] [Header("Префабы самолетов")]
         private GameObject[] prefabAirplane;
 
+        [SerializeField] [Header("Префабы обычных самолетов")]
+        private GameObject[] prefabNormalAirplane;
+
         /// <summary>
         /// Указываются правые границы инетрвалов для каждого объекта.
         /// см. алгоритм генерации
