@@ -14,6 +14,9 @@ namespace Source.Controllers
         [SerializeField] [Header("Префабы самолетов")]
         private GameObject[] prefabAirplane;
 
+        [SerializeField] [Header("Префабы обычных самолетов")]
+        private GameObject[] prefabNormalAirplane;
+
         /// <summary>
         /// Указываются правые границы инетрвалов для каждого объекта.
         /// см. алгоритм генерации
@@ -76,7 +79,7 @@ namespace Source.Controllers
                     .GetComponent<Airplane>();
             airplane.parentPrefabPoints = canvasScreen;
             airplane.transform.SetParent(canvasScreen.transform);
-            airplane.InitializeAirplane(path, gameControllerSource.GetComponent<GameController>());
+            airplane.InitializeAirplane(path[1], gameControllerSource.GetComponent<GameController>());
         }
 
         private List<Vector3> GetRandomStartEnd()

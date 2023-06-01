@@ -19,7 +19,6 @@ namespace Source.Models
             if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
                 (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
             {
-                // TODO: Анимация взрыва
                 _gameController.EndGame();
             }
             if (other.gameObject.CompareTag("money"))
@@ -37,7 +36,6 @@ namespace Source.Models
         }
         public new void OnEndDrag(PointerEventData eventData)
         {
-            // TODO: Анимация взрыва
             _gameController.EndGame();
         }
         private void OnMouseOver()
