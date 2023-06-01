@@ -57,7 +57,7 @@ namespace Source.Controllers
             _currentTime = 0;
             _timeFromLastPlane.Start();
             _airplaneCount = 0;
-            _currentCheckedAirplane = 0;
+            _currentCheckedAirplane = FindCurrentAirplane();
         }
 
         private void Update()
@@ -133,7 +133,7 @@ namespace Source.Controllers
 
         private int FindCurrentAirplane()
         {
-            return PlayerPrefs.GetInt("equip", 0);
+            return PlayerPrefs.GetInt("equipedPlane", 0);
         }
     }
 }
