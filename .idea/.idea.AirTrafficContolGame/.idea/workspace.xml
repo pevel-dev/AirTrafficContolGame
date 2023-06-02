@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2e97b04a-f40a-4e57-9db0-3b429906791f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/AirplaneAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AirplaneAnimationController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Controllers/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Airplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Airplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Heal AIrplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Heal AIrplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/MilitaryAirplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/MilitaryAirplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/PaperAirplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/PaperAirplane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/RusAirplane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/RusAirplane.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Models/Cloud.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Models/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Shop/PlaneAnimation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/repos/AirTrafficContolGame/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -145,6 +148,7 @@
       <workItem from="1685613269048" duration="5222000" />
       <workItem from="1685659541753" duration="38000" />
       <workItem from="1685659603604" duration="658000" />
+      <workItem from="1685662803749" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="что-то">
       <created>1683841597116</created>
@@ -191,8 +195,38 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="04bdd4da-4fda-4e94-a3b8-d0f4885c492d" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="04bdd4da-4fda-4e94-a3b8-d0f4885c492d">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />

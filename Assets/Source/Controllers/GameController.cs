@@ -120,5 +120,6 @@ namespace Source.Controllers
             moneyText.text = _money.ToString();
             pointText.text = _points.ToString();
         }
+        
     }
 }
