@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2e97b04a-f40a-4e57-9db0-3b429906791f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirTrafficContolGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AirplaneAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AirplaneAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Light.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Light.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Airplane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/MilitaryAirplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +146,7 @@
       <workItem from="1685613269048" duration="5222000" />
       <workItem from="1685659541753" duration="38000" />
       <workItem from="1685659603604" duration="658000" />
-      <workItem from="1685662803749" duration="2940000" />
+      <workItem from="1685662803749" duration="4005000" />
     </task>
     <task id="LOCAL-00001" summary="что-то">
       <created>1683841597116</created>

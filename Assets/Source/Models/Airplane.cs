@@ -102,7 +102,7 @@ namespace Source.Models
 
         private void Start()
         {
-            airplanePrefab.GetComponent<Animator>().Play("Light");
+            //airplanePrefab.GetComponent<Animator>().Play("Light");
         }
 
 
