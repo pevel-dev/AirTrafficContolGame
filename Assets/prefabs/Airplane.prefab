@@ -477,7 +477,7 @@ MonoBehaviour:
   airplanePrefab: {fileID: 7921346126584957212}
   downScaleSpeed: 0.005
   speed: 0.2
-  minimalLandingLength: 100
+  minimalLandingLength: 300
   mouseMult: 1
   lifeTime: 50
   eps: 10

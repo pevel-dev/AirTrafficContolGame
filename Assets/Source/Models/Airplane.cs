@@ -58,15 +58,15 @@ namespace Source.Models
         protected int radius;
         
         protected GameController _gameController;
-        private PathLine _linesPath;
-        private HealthBar _healthBar;
+        protected PathLine _linesPath;
+        protected HealthBar _healthBar;
         protected bool _downLocalScale;
         private Vector3 _delta;
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
         private static float Speed { get; set; }
 
-        private IEnumerable<Vector3> Path()
+        protected IEnumerable<Vector3> Path()
         {
             yield return transform.position;
             foreach (var pathPoint in _path)
@@ -121,7 +121,7 @@ namespace Source.Models
             UpdateLocalScale();
         }
 
-        private void CheckMouseScroll()
+        protected void CheckMouseScroll()
         {
             var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
             if (mouseWheelScroll == 0) return;
@@ -149,8 +149,13 @@ namespace Source.Models
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            _path[0].transform.position = Camera.allCameras[0]
+            var newPos = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            if (newPos.x is >= 0 and <= 1920 &&
+                newPos.y is >= 0 and <= 1080)
+            {
+                _path[0].transform.position = newPos;
+            }
         }
         
 
@@ -190,7 +195,7 @@ namespace Source.Models
             => _healthBar.Status() && _path[0].transform.position.x is >= 0 and <= 1920 &&
                _path[0].transform.position.y is >= 0 and <= 1080;
 
-        private void UpdateLocalScale()
+        protected void UpdateLocalScale()
         {
             if (_downLocalScale)
                 transform.localScale -= new Vector3(downScaleSpeed, downScaleSpeed, downScaleSpeed);
@@ -206,7 +211,7 @@ namespace Source.Models
             _healthBar.Initialize(lifeTime);
         }
 
-        private void UpdatePosition()
+        protected void UpdatePosition()
         {
             if (_path.Count > 0)
             {
@@ -243,7 +248,7 @@ namespace Source.Models
             }
         }
 
-        private void UpdateDelta()
+        protected void UpdateDelta()
         {
             if (_path.Count > 0)
                 _delta = (_path[0].transform.position - transform.position).normalized * (speed * Time.deltaTime);
