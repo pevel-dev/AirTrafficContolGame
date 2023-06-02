@@ -1,11 +1,34 @@
 ﻿using Source.Controllers;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
+using System.Linq;
 
 namespace Source.Models
 {
     public class MilitaryAirplane : Airplane, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
+        
+        private void Update()
+        {
+            if (!_healthBar.Status())
+            {
+                if (!_downLocalScale)
+                    _gameController.AirplaneKilled();
+                _downLocalScale = true;
+            }
+
+            if (!_downLocalScale && !(_path[0].transform.position.x is >= 0 and <= 1920 && _path[0].transform.position.y is >= 0 and <= 1080))
+            {
+                _gameController.AddPoints(AirplaneTypes.Soldier);
+                _downLocalScale = true;
+            }
+            UpdatePosition();
+            _linesPath.UpdatePosition(Path().ToList());
+            CheckMouseScroll();
+            UpdateDelta();
+            UpdateLocalScale();
+        }
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.GetComponent<Airplane>() is not null &&
@@ -37,13 +60,6 @@ namespace Source.Models
         public new void OnEndDrag(PointerEventData eventData)
         {
             _gameController.EndGame();
-        }
-        private void OnMouseOver()
-        {
-            var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
-            if (mouseWheelScroll != 0)
-            {
-            }
         }
     }
 }

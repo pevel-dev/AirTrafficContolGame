@@ -58,15 +58,17 @@ namespace Source.Models
         protected int radius;
         
         protected GameController _gameController;
-        private PathLine _linesPath;
-        private HealthBar _healthBar;
+        protected PathLine _linesPath;
+        protected HealthBar _healthBar;
         protected bool _downLocalScale;
         private Vector3 _delta;
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
         private static float Speed { get; set; }
+        public AudioSource soundBoard;
+        public AudioClip landing;
 
-        private IEnumerable<Vector3> Path()
+        protected IEnumerable<Vector3> Path()
         {
             yield return transform.position;
             foreach (var pathPoint in _path)
@@ -97,7 +99,13 @@ namespace Source.Models
                 speed = Speed;
             InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
-            _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
+            _linesPath = new PathLine(lineRenderer, lineColor, widthLine); 
+            soundBoard = GetComponent<AudioSource>();
+        }
+
+        private void Start()
+        {
+            //airplanePrefab.GetComponent<Animator>().Play("Light");
         }
 
 
@@ -116,7 +124,7 @@ namespace Source.Models
             UpdateLocalScale();
         }
 
-        private void CheckMouseScroll()
+        protected void CheckMouseScroll()
         {
             var mouseWheelScroll = Input.GetAxis("Mouse ScrollWheel");
             if (mouseWheelScroll == 0) return;
@@ -144,33 +152,45 @@ namespace Source.Models
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            _path[0].transform.position = Camera.allCameras[0]
+            var newPos = Camera.allCameras[0]
                 .ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            if (newPos.x is >= 0 and <= 1920 &&
+                newPos.y is >= 0 and <= 1080)
+            {
+                _path[0].transform.position = newPos;
+            }
         }
         
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.GetComponent<Airplane>() is not null &&
-                (other.gameObject.transform.position - transform.position).magnitude < radius)
+            if (!_downLocalScale)
             {
-                _downLocalScale = true;
-                airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
-                _gameController.AirplaneKilled();
-            }
+                if (other.gameObject.GetComponent<Airplane>() is not null &&
+                    (other.gameObject.transform.position - transform.position).magnitude < radius)
+                {
 
-            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
-                (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
-            {
-                _downLocalScale = true;
-                _gameController.AddPoints(AirplaneTypes.Basic);
-                _gameController.AirplaneDown();
-            }
+                    _downLocalScale = true;
+                    soundBoard.Play();
+                    airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
+                    _gameController.AirplaneKilled();
+                }
 
-            if (other.gameObject.CompareTag("money"))
-            {
-                Destroy(other.gameObject);
-                _gameController.CollectedMoney();
+                if (other.gameObject.CompareTag("airport") &&
+                    _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
+                    (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
+                {
+                    _downLocalScale = true;
+                    soundBoard.PlayOneShot(landing);
+                    _gameController.AddPoints(AirplaneTypes.Basic);
+                    _gameController.AirplaneDown();
+                }
+
+                if (other.gameObject.CompareTag("money"))
+                {
+                    Destroy(other.gameObject);
+                    _gameController.CollectedMoney();
+                }
             }
         }
 
@@ -180,7 +200,7 @@ namespace Source.Models
             => _healthBar.Status() && _path[0].transform.position.x is >= 0 and <= 1920 &&
                _path[0].transform.position.y is >= 0 and <= 1080;
 
-        private void UpdateLocalScale()
+        protected void UpdateLocalScale()
         {
             if (_downLocalScale)
                 transform.localScale -= new Vector3(downScaleSpeed, downScaleSpeed, downScaleSpeed);
@@ -196,7 +216,7 @@ namespace Source.Models
             _healthBar.Initialize(lifeTime);
         }
 
-        private void UpdatePosition()
+        protected void UpdatePosition()
         {
             if (_path.Count > 0)
             {
@@ -233,7 +253,7 @@ namespace Source.Models
             }
         }
 
-        private void UpdateDelta()
+        protected void UpdateDelta()
         {
             if (_path.Count > 0)
                 _delta = (_path[0].transform.position - transform.position).normalized * (speed * Time.deltaTime);

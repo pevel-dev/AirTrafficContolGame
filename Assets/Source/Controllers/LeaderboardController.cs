@@ -20,9 +20,11 @@ namespace Source.Controllers
         private string[] _playerNames;
         private int _lastResult;
         private bool _saved;
+        public AudioSource soundBoard;
 
         void Awake()
         {
+            soundBoard = GetComponent<AudioSource>();
             _lastResult = PlayerPrefs.GetInt("lastResult", 0);
             textResult.text = _lastResult.ToString();
             
@@ -69,6 +71,7 @@ namespace Source.Controllers
                     }
                     _saved = true;
                     PlayerPrefs.Save();
+                    soundBoard.Play();
                     break;
 
                 }

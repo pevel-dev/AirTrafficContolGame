@@ -32,14 +32,30 @@ namespace Source.Shop
         private bool[] planeUnlock = { true, false, false };
 
         private int _currentPlane;
+        private int _equipedPlane;
 
         private int _money;
+
+		private bool _isFirst;
+
+  		public AudioSource soundBoard;
+    	public AudioClip buySound;
+    	public AudioClip equipSound;
         private void Awake()
         {
+			_isFirst = true;
+			soundBoard = GetComponent<AudioSource>();
             for (var i = 1; i <= 2; i++)
             {
-                if (PlayerPrefs.GetInt($"skin{i}", 0) == 1) 
+                if (PlayerPrefs.GetInt($"skin{i}", 1) == 1)
+                {
                     planeUnlock[i] = true;
+                    if (PlayerPrefs.GetInt("equipedPlane", i) == 1)
+                    {
+                        _equipedPlane = i;
+                        PlayerPrefs.SetInt("equipedPlane", i);
+                    }
+                }
             }
             SelectPlane(0);
             _money = PlayerPrefs.GetInt("money");
@@ -61,6 +77,9 @@ namespace Source.Shop
                 transform.GetChild(i).gameObject.SetActive(i == index);
 
             _currentPlane = index;
+			if (_isFirst == false)
+        		soundBoard.Play();
+			_isFirst = false;
             UpdateUI();
         }
 
@@ -69,17 +88,19 @@ namespace Source.Shop
             if (planeUnlock[_currentPlane])
             {
                 buy.gameObject.SetActive(true);
-                priceText.text = "куплен";
+                if (_equipedPlane == _currentPlane)
+                    priceText.text = "выбран";
+                else
+                    priceText.text = "куплен";
             }
             else
             {
                 buy.gameObject.SetActive(true);
                 priceText.text = planePrices[_currentPlane] + "$";
-
                 buy.interactable = _money >= planePrices[_currentPlane];
             }
         }
-    
+
         public void ChangePlane(int change)
         {
             _currentPlane += change;
@@ -88,14 +109,26 @@ namespace Source.Shop
 
         public void BuyPlane()
         {
-            if (planeUnlock[_currentPlane]) 
+            if (planeUnlock[_currentPlane])
                 return;
 
             _money -= planePrices[_currentPlane];
             UpdateText();
+			soundBoard.PlayOneShot(buySound);
             planeUnlock[_currentPlane] = true;
             UpdateUI();
             SavePlanes();
+        }
+
+        public void EquipPlane()
+        {
+            if (planeUnlock[_currentPlane] && _equipedPlane != _currentPlane)
+            {
+				soundBoard.PlayOneShot(equipSound);
+                _equipedPlane = _currentPlane;
+                PlayerPrefs.SetInt("equipedPlane", _currentPlane);
+                priceText.text = "выбран";
+            }
         }
 
         private void SavePlanes()
@@ -104,7 +137,7 @@ namespace Source.Shop
                 PlayerPrefs.SetInt($"skin{i}", planeUnlock[i] ? 1 : 0);
 
             if (planeUnlock[_currentPlane]) 
-                PlayerPrefs.SetInt("equip", _currentPlane);
+                PlayerPrefs.SetInt("equipedPlane", _currentPlane);
         }
     }
 }
