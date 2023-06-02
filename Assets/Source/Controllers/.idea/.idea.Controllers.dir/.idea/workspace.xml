@@ -19,6 +19,11 @@
       <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Script/SShop.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Controllers.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeaderboardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LeaderboardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Airplane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Airplane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shop/PlaneSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Shop/PlaneSelection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Sprites/230.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Sprites/230.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tutorial.txt" beforeDir="false" />
@@ -46,9 +51,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AirplanesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LeaderboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Models/Airplane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Shop/PlaneSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ui/ButtonChangeScene.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

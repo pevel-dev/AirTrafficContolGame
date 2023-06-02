@@ -65,6 +65,8 @@ namespace Source.Models
         protected readonly List<GameObject> _path = new();
         private Vector3 Position => transform.position;
         private static float Speed { get; set; }
+        public AudioSource soundBoard;
+        public AudioClip landing;
 
         protected IEnumerable<Vector3> Path()
         {
@@ -97,7 +99,8 @@ namespace Source.Models
                 speed = Speed;
             InitializeHealthBar();
             var lineRenderer = this.AddComponent<LineRenderer>();
-            _linesPath = new PathLine(lineRenderer, lineColor, widthLine);
+            _linesPath = new PathLine(lineRenderer, lineColor, widthLine); 
+            soundBoard = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -168,6 +171,7 @@ namespace Source.Models
                 {
 
                     _downLocalScale = true;
+                    soundBoard.Play();
                     airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
                     _gameController.AirplaneKilled();
                 }
@@ -177,6 +181,7 @@ namespace Source.Models
                     (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
                 {
                     _downLocalScale = true;
+                    soundBoard.PlayOneShot(landing);
                     _gameController.AddPoints(AirplaneTypes.Basic);
                     _gameController.AirplaneDown();
                 }
