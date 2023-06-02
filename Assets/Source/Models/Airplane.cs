@@ -156,26 +156,31 @@ namespace Source.Models
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.GetComponent<Airplane>() is not null &&
-                (other.gameObject.transform.position - transform.position).magnitude < radius)
+            if (!_downLocalScale)
             {
-                _downLocalScale = true;
-                airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
-                _gameController.AirplaneKilled();
-            }
+                if (other.gameObject.GetComponent<Airplane>() is not null &&
+                    (other.gameObject.transform.position - transform.position).magnitude < radius)
+                {
 
-            if (other.gameObject.CompareTag("airport") && _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
-                (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
-            {
-                _downLocalScale = true;
-                _gameController.AddPoints(AirplaneTypes.Basic);
-                _gameController.AirplaneDown();
-            }
+                    _downLocalScale = true;
+                    airplanePrefab.GetComponent<Animator>().Play("Plane_explosing");
+                    _gameController.AirplaneKilled();
+                }
 
-            if (other.gameObject.CompareTag("money"))
-            {
-                Destroy(other.gameObject);
-                _gameController.CollectedMoney();
+                if (other.gameObject.CompareTag("airport") &&
+                    _path[^1].GetComponent<PathPoint>().OnCollisionInRunwayZone &&
+                    (_path[^1].transform.position - transform.position).magnitude > minimalLandingLength)
+                {
+                    _downLocalScale = true;
+                    _gameController.AddPoints(AirplaneTypes.Basic);
+                    _gameController.AirplaneDown();
+                }
+
+                if (other.gameObject.CompareTag("money"))
+                {
+                    Destroy(other.gameObject);
+                    _gameController.CollectedMoney();
+                }
             }
         }
 
